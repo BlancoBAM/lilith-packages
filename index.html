@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lilith Linux APT Package Repository — official package source for Lilith Linux, a custom Ubuntu-based distribution with COSMIC Desktop.">
+    <title>Lilith Linux Package Repository</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --void: #0D0D0D;
+            --surface: #161616;
+            --surface-raised: #1F1F1F;
+            --border: #2A1010;
+            --border-glow: #C0392B;
+            --flame: #C0392B;
+            --ember: #E74C3C;
+            --infernal: #FF6B35;
+            --text: #F0E6E6;
+            --text-muted: #8A7070;
+            --text-dim: #4A3A3A;
+            --mono: 'JetBrains Mono', 'Courier New', monospace;
+            --sans: 'Inter', system-ui, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--void);
+            color: var(--text);
+            font-family: var(--sans);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ── Flame background ────────────────────────────────────────────── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 40% at 50% 100%, rgba(192, 57, 43, 0.15) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 30% at 80% 80%, rgba(231, 76, 60, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 30% 20% at 20% 90%, rgba(255, 107, 53, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-wrap {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Nav ─────────────────────────────────────────────────────────── */
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 48px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(13, 13, 13, 0.85);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--flame);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo span {
+            color: var(--text-muted);
+            font-weight: 400;
+            font-size: 14px;
+            margin-left: 8px;
+        }
+
+        .nav-links {
+            margin-left: auto;
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--ember);
+        }
+
+        /* ── Hero ─────────────────────────────────────────────────────────── */
+        .hero {
+            text-align: center;
+            padding: 80px 48px 60px;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(192, 57, 43, 0.12);
+            border: 1px solid rgba(192, 57, 43, 0.3);
+            color: var(--ember);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 100px;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .hero-badge::before {
+            content: '●';
+            font-size: 8px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text) 0%, var(--ember) 60%, var(--infernal) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 560px;
+            margin: 0 auto 48px;
+            font-weight: 400;
+        }
+
+        /* ── Install block ───────────────────────────────────────────────── */
+        .install-block {
+            max-width: 720px;
+            margin: 0 auto 80px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .install-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .install-tab {
+            padding: 12px 24px;
+            font-size: 13px;
+            font-family: var(--mono);
+            color: var(--text-muted);
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: all 0.2s;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+        }
+
+        .install-tab.active {
+            color: var(--ember);
+            border-bottom-color: var(--ember);
+        }
+
+        .install-content {
+            padding: 0;
+        }
+
+        .install-step {
+            display: none;
+        }
+
+        .install-step.active {
+            display: block;
+        }
+
+        .code-block {
+            position: relative;
+            padding: 24px;
+        }
+
+        .code-block pre {
+            font-family: var(--mono);
+            font-size: 13px;
+            line-height: 1.7;
+            color: #D4C4C4;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .code-block .comment {
+            color: var(--text-dim);
+        }
+
+        .code-block .cmd {
+            color: var(--text);
+        }
+
+        .code-block .arg {
+            color: var(--ember);
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(192, 57, 43, 0.15);
+            border: 1px solid rgba(192, 57, 43, 0.3);
+            color: var(--ember);
+            font-size: 12px;
+            font-family: var(--mono);
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: rgba(192, 57, 43, 0.25);
+        }
+
+        /* ── Stats bar ───────────────────────────────────────────────────── */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat {
+            background: var(--surface);
+            padding: 20px 24px;
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--flame);
+            font-family: var(--mono);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        /* ── Content sections ────────────────────────────────────────────── */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        section {
+            padding: 64px 0;
+        }
+
+        section + section {
+            border-top: 1px solid var(--border);
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--flame);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 32px;
+            color: var(--text);
+        }
+
+        /* ── Components grid ─────────────────────────────────────────────── */
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .component-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            transition: all 0.2s;
+        }
+
+        .component-card:hover {
+            border-color: rgba(192, 57, 43, 0.4);
+            background: var(--surface-raised);
+            transform: translateY(-2px);
+        }
+
+        .component-name {
+            font-family: var(--mono);
+            font-size: 14px;
+            color: var(--ember);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .component-name::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--flame);
+            flex-shrink: 0;
+        }
+
+        .component-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .component-count {
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--text-dim);
+            font-family: var(--mono);
+        }
+
+        /* ── Package table ───────────────────────────────────────────────── */
+        .pkg-filter {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 6px 16px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-muted);
+            font-size: 13px;
+            font-family: var(--mono);
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            border-color: var(--flame);
+            color: var(--ember);
+            background: rgba(192, 57, 43, 0.1);
+        }
+
+        .pkg-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .pkg-table thead tr {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pkg-table th {
+            text-align: left;
+            padding: 10px 16px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pkg-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(42, 16, 16, 0.5);
+            vertical-align: middle;
+        }
+
+        .pkg-table tr:hover td {
+            background: var(--surface);
+        }
+
+        .pkg-name {
+            font-family: var(--mono);
+            font-size: 13px;
+            color: var(--ember);
+        }
+
+        .pkg-version {
+            font-family: var(--mono);
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+
+        .pkg-desc {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .pkg-component {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-family: var(--mono);
+        }
+
+        .pkg-component.main { background: rgba(192, 57, 43, 0.15); color: var(--ember); }
+        .pkg-component.xtra { background: rgba(255, 107, 53, 0.15); color: var(--infernal); }
+        .pkg-component.desktop { background: rgba(139, 26, 26, 0.2); color: #C46060; }
+
+        /* ── Key section ─────────────────────────────────────────────────── */
+        .key-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px 32px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .key-info {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .key-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .key-info p {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-family: var(--mono);
+        }
+
+        .key-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--flame);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .key-download-btn:hover {
+            background: var(--ember);
+            transform: translateY(-1px);
+        }
+
+        /* ── Footer ──────────────────────────────────────────────────────── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-brand {
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+
+        .footer-brand strong {
+            color: var(--flame);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--ember);
+        }
+
+        /* ── Responsive ──────────────────────────────────────────────────── */
+        @media (max-width: 768px) {
+            nav { padding: 12px 24px; }
+            .hero { padding: 48px 24px 40px; }
+            .container { padding: 0 24px; }
+            footer { padding: 24px; }
+            .key-card { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- Nav -->
+    <nav>
+        <div class="nav-logo">Lilith <span>/ packages</span></div>
+        <ul class="nav-links">
+            <li><a href="#install">Install</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#keyring">Signing Key</a></li>
+            <li><a href="https://github.com/BlancoBAM" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="install">
+        <div class="hero-badge">APT Repository</div>
+        <h1>Lilith Linux Packages</h1>
+        <p class="hero-sub">Official APT package repository for Lilith Linux — Ubuntu-based, COSMIC Desktop, open source.</p>
+
+        <div class="install-block">
+            <div class="install-tabs">
+                <button class="install-tab active" onclick="showTab('quick', this)" id="tab-quick">Quick Install</button>
+                <button class="install-tab" onclick="showTab('manual', this)" id="tab-manual">Manual Setup</button>
+                <button class="install-tab" onclick="showTab('source', this)" id="tab-source">sources.list</button>
+            </div>
+            <div class="install-content">
+                <div class="install-step active" id="step-quick">
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode('quick-code')">copy</button>
+                        <pre id="quick-code"><span class="comment"># Add Lilith Linux repository</span>
+<span class="cmd">curl -fsSL</span> <span class="arg">https://blancobam.github.io/lilith-packages/public-key.asc</span> \
+  | sudo gpg --dearmor -o /usr/share/keyrings/lilith-archive-keyring.gpg
+
+echo <span class="arg">"deb [arch=amd64 signed-by=/usr/share/keyrings/lilith-archive-keyring.gpg] \
+  https://blancobam.github.io/lilith-packages stable main xtra"</span> \
+  | sudo tee /etc/apt/sources.list.d/lilith-linux.list
+
+sudo apt update && sudo apt install <span class="arg">offerings tweakers lilim stake ouija-pad</span></pre>
+                    </div>
+                </div>
+                <div class="install-step" id="step-manual">
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode('manual-code')">copy</button>
+                        <pre id="manual-code"><span class="comment"># Step 1: Download the GPG key</span>
+wget -q https://blancobam.github.io/lilith-packages/public-key.asc
+
+<span class="comment"># Step 2: Install the keyring</span>
+gpg --dearmor public-key.asc | sudo tee /usr/share/keyrings/lilith-archive-keyring.gpg >/dev/null
+
+<span class="comment"># Step 3: Add source line</span>
+sudo nano /etc/apt/sources.list.d/lilith-linux.list
+<span class="comment"># Paste: deb [arch=amd64 signed-by=/usr/share/keyrings/lilith-archive-keyring.gpg] https://blancobam.github.io/lilith-packages stable main xtra</span>
+
+<span class="comment"># Step 4: Update</span>
+sudo apt update</pre>
+                    </div>
+                </div>
+                <div class="install-step" id="step-source">
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode('source-code')">copy</button>
+                        <pre id="source-code"><span class="comment"># /etc/apt/sources.list.d/lilith-linux.list</span>
+<span class="arg">deb [arch=amd64 signed-by=/usr/share/keyrings/lilith-archive-keyring.gpg] https://blancobam.github.io/lilith-packages stable main xtra</span></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-bar">
+                <div class="stat"><div class="stat-num">3</div><div class="stat-label">Components</div></div>
+                <div class="stat"><div class="stat-num">60+</div><div class="stat-label">Packages</div></div>
+                <div class="stat"><div class="stat-num">amd64</div><div class="stat-label">Architecture</div></div>
+                <div class="stat"><div class="stat-num">GPG</div><div class="stat-label">Signed</div></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Components -->
+    <section>
+        <div class="container">
+            <div class="section-label">Repository Structure</div>
+            <h2>Components</h2>
+            <div class="components-grid">
+                <div class="component-card">
+                    <div class="component-name">main</div>
+                    <div class="component-desc">Core Lilith Linux packages. Installed by default on every Lilith Linux system. Includes GUI apps, CLI tools, and system utilities.</div>
+                    <div class="component-count">~40 packages</div>
+                </div>
+                <div class="component-card">
+                    <div class="component-name">xtra</div>
+                    <div class="component-desc">Curated optional extras — productivity apps, gaming tools, AI utilities, and community favorites.</div>
+                    <div class="component-count">~20 packages</div>
+                </div>
+                <div class="component-card">
+                    <div class="component-name">desktop</div>
+                    <div class="component-desc">Alternative desktop environment meta-packages. Install KDE Plasma, XFCE, GNOME, i3, Sway, and more alongside COSMIC.</div>
+                    <div class="component-count">13 desktop environments</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Table -->
+    <section id="packages">
+        <div class="container">
+            <div class="section-label">Available Software</div>
+            <h2>Packages</h2>
+            <div class="pkg-filter">
+                <button class="filter-btn active" onclick="filterPkgs('all', this)">All</button>
+                <button class="filter-btn" onclick="filterPkgs('main', this)">main</button>
+                <button class="filter-btn" onclick="filterPkgs('xtra', this)">xtra</button>
+                <button class="filter-btn" onclick="filterPkgs('desktop', this)">desktop</button>
+            </div>
+            <table class="pkg-table" id="pkg-table">
+                <thead>
+                    <tr>
+                        <th>Package</th>
+                        <th>Version</th>
+                        <th>Component</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="pkg-tbody">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Signing Key -->
+    <section id="keyring">
+        <div class="container">
+            <div class="section-label">GPG Signing</div>
+            <h2>Signing Key</h2>
+            <div class="key-card">
+                <div class="key-info">
+                    <h3>Lilith Linux Archive Keyring</h3>
+                    <p>blancobam@protonmail.com</p>
+                    <p style="margin-top:8px;font-family:var(--sans);font-size:13px;color:var(--text-muted)">All packages in this repository are signed with this GPG key. APT will verify package integrity automatically.</p>
+                </div>
+                <a href="public-key.asc" class="key-download-btn" download>
+                    ↓ Download public-key.asc
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-brand">
+            <strong>Lilith Linux</strong> — Built with darkness and love by BlancoBAM
+        </div>
+        <ul class="footer-links">
+            <li><a href="https://github.com/BlancoBAM/lil-build" target="_blank">lil-build</a></li>
+            <li><a href="https://github.com/BlancoBAM" target="_blank">GitHub</a></li>
+            <li><a href="public-key.asc">GPG Key</a></li>
+        </ul>
+    </footer>
+
+</div>
+
+<script>
+// Package data
+const PACKAGES = [
+    { name: 'offerings', version: '1.0.2-beta-1', component: 'main', desc: 'Unified package manager GUI for Lilith Linux' },
+    { name: 'tweakers', version: '1.0.1', component: 'main', desc: 'System optimization and tweaks GUI' },
+    { name: 'lilim', version: '0.1.0', component: 'main', desc: 'AI Assistant with persistent memory (Lilith AI)' },
+    { name: 'stake', version: '0.2.3', component: 'main', desc: 'Lilith Stake CLI package manager tool' },
+    { name: 'ouija-pad', version: '1.1.0', component: 'main', desc: 'Lilith default text editor GUI' },
+    { name: 'lsd', version: '1.2.0', component: 'main', desc: 'Modern ls replacement with icons and colors' },
+    { name: 'zoxide', version: '0.9.9', component: 'main', desc: 'Smart cd — learns your most frequent directories' },
+    { name: 'bat', version: '0.26.1', component: 'main', desc: 'cat replacement with syntax highlighting' },
+    { name: 'topgrade', version: '17.5.0', component: 'main', desc: 'Upgrade everything — apt, cargo, npm, flatpak, etc.' },
+    { name: 'nushell', version: '0.103.0', component: 'main', desc: 'Nu shell — structured data shell written in Rust' },
+    { name: 'fd', version: '10.2.0', component: 'main', desc: 'Fast and user-friendly find alternative' },
+    { name: 'ripgrep', version: '14.1.1', component: 'main', desc: 'Fast line-oriented search tool' },
+    { name: 'starship', version: '1.22.1', component: 'main', desc: 'Cross-shell customizable prompt' },
+    { name: 'atuin', version: '18.4.0', component: 'main', desc: 'Magical shell history with sync and search' },
+    { name: 'procs', version: '0.14.10', component: 'main', desc: 'Modern ps replacement written in Rust' },
+    { name: 'just', version: '1.45.0', component: 'main', desc: 'Command runner / Makefile alternative' },
+    { name: 'flatpak', version: '1.15.10', component: 'main', desc: 'Application sandboxing and distribution framework' },
+    { name: 'gemini-cli', version: '0.43.0', component: 'main', desc: 'Google Gemini CLI — AI assistant in the terminal' },
+    { name: 'hellfire', version: '152.0a1', component: 'main', desc: 'HellFire Browser — privacy-focused Firefox for Lilith' },
+    { name: 'lilith-tts', version: '1.0.0', component: 'main', desc: 'Lilith Linux Text-to-Speech Engine (Rust daemon)' },
+    { name: 'lilith-grub-theme', version: '1.0.0', component: 'main', desc: 'Custom GRUB2 bootloader theme for Lilith Linux' },
+    { name: 'uutils-coreutils', version: '0.0.30', component: 'main', desc: 'Rust reimplementation of GNU coreutils' },
+    { name: 'soar', version: '1.0.0', component: 'main', desc: 'Fast distro-agnostic package manager (SAB format)' },
+    { name: 'astral-uv', version: '0.7.8', component: 'main', desc: 'Extremely fast Python package manager by Astral' },
+    // xtra
+    { name: 'ferdium', version: '7.1.2', component: 'xtra', desc: 'All-in-one messaging and service desktop app' },
+    { name: 'waveterm', version: '0.10.4', component: 'xtra', desc: 'Open-source AI-native terminal with visual blocks' },
+    { name: 'spacedrive', version: '0.4.2', component: 'xtra', desc: 'Open-source cross-platform file explorer' },
+    { name: 'open-interpreter', version: '0.4.2', component: 'xtra', desc: 'Local AI agent that can execute code' },
+    { name: 'proton-pass', version: 'latest', component: 'xtra', desc: 'End-to-end encrypted password manager' },
+    { name: 'lux-wine', version: '1.0.0', component: 'xtra', desc: 'Wine integration wrapper for Linux' },
+    { name: 'linuxtoys', version: '1.0.0', component: 'xtra', desc: 'Collection of interactive terminal toys' },
+    { name: 'noctua', version: '0.1.0', component: 'xtra', desc: 'Dark mode browser dashboard for COSMIC Desktop' },
+    // desktop
+    { name: 'lilith-plasma', version: '1.0.0', component: 'desktop', desc: 'Minimal KDE Plasma Desktop for Lilith Linux' },
+    { name: 'lilith-xfce', version: '1.0.0', component: 'desktop', desc: 'Minimal XFCE Desktop Environment for Lilith Linux' },
+    { name: 'lilith-gnome', version: '1.0.0', component: 'desktop', desc: 'Minimal GNOME Desktop Environment for Lilith Linux' },
+    { name: 'lilith-i3', version: '1.0.0', component: 'desktop', desc: 'Minimal i3 Window Manager for Lilith Linux' },
+    { name: 'lilith-sway', version: '1.0.0', component: 'desktop', desc: 'Minimal Sway Window Manager for Lilith Linux' },
+    { name: 'lilith-mate', version: '1.0.0', component: 'desktop', desc: 'Minimal MATE Desktop Environment for Lilith Linux' },
+    { name: 'lilith-lxqt', version: '1.0.0', component: 'desktop', desc: 'Minimal LXQt Desktop Environment for Lilith Linux' },
+    { name: 'lilith-budgie', version: '1.0.0', component: 'desktop', desc: 'Minimal Budgie Desktop Environment for Lilith Linux' },
+];
+
+function renderPkgs(filter) {
+    const tbody = document.getElementById('pkg-tbody');
+    const filtered = filter === 'all' ? PACKAGES : PACKAGES.filter(p => p.component === filter);
+    tbody.innerHTML = filtered.map(p => `
+        <tr data-component="${p.component}">
+            <td><span class="pkg-name">${p.name}</span></td>
+            <td><span class="pkg-version">${p.version}</span></td>
+            <td><span class="pkg-component ${p.component}">${p.component}</span></td>
+            <td><span class="pkg-desc">${p.desc}</span></td>
+        </tr>
+    `).join('');
+}
+
+function filterPkgs(filter, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderPkgs(filter);
+}
+
+function showTab(tabId, btn) {
+    document.querySelectorAll('.install-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.install-step').forEach(s => s.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('step-' + tabId).classList.add('active');
+}
+
+function copyCode(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = event.target;
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+    });
+}
+
+// Init
+renderPkgs('all');
+</script>
+</body>
+</html>
