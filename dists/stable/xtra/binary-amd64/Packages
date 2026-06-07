@@ -1,0 +1,100 @@
+Package: ferdium
+Version: 7.1.2
+Architecture: amd64
+Filename: pool/xtra/ferdium_7.1.2_amd64.deb
+Size: 870
+SHA256: 91a09601e98b18ea6637b8876b7bbe86395b91bcff2572df38ce69518da164c0
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Ferdium — all-in-one messaging desktop app (Lilith Wrapper)
+Depends: curl, libfuse2t64
+
+Package: waveterm
+Version: 0.10.4
+Architecture: amd64
+Filename: pool/xtra/waveterm_0.10.4_amd64.deb
+Size: 1032
+SHA256: b1a56a177634bcb0fe819f66c95ae59ce73b1facdfe4e502bbc2e222932feb25
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: WaveTerm — open-source AI-native terminal with visual blocks (Lilith Wrapper)
+Depends: curl, python3
+
+Package: webi-installers
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/xtra/webi-installers_1.0.0_amd64.deb
+Size: 700
+SHA256: 307125ac810467ea788c07a698eb0247be01744046c4b7efc49e71da3b0c2acb
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Webi — easy curl-based installers for developer tools (Lilith Wrapper)
+Depends: curl
+
+Package: open-interpreter
+Version: 0.4.2
+Architecture: amd64
+Filename: pool/xtra/open-interpreter_0.4.2_amd64.deb
+Size: 650
+SHA256: ef5b09905b47b5d807d7c359dd7a6cdcbf9f528c30c3d5182a3197a61ad55864
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Open Interpreter — local AI agent that can execute code (Lilith Wrapper)
+Depends: python3, python3-pip
+
+Package: bashsenpai
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/xtra/bashsenpai_1.0.0_amd64.deb
+Size: 642
+SHA256: 809f80776ceb33d50892196a7745e1ff230672d920bbcdf3da07b25e88c7718d
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: BashSenpai — terminal AI assistant for bash commands (Lilith Wrapper)
+Depends: python3, python3-pip
+
+Package: spacedrive
+Version: 0.4.2
+Architecture: amd64
+Filename: pool/xtra/spacedrive_0.4.2_amd64.deb
+Size: 1008
+SHA256: 64c7664cc7d3a4f6fb8d1a98773d2b159925f6ab91763ac5228aae55d0a38415
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Spacedrive — cross-platform open-source file explorer (Lilith Wrapper)
+Depends: curl, python3
+
+Package: proton-pass
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/xtra/proton-pass_1.0.0_amd64.deb
+Size: 982
+SHA256: 8648a02e415cfc232cfdde53962f980615fab9aaf583c00e9613fb2639356bec
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Proton Pass — end-to-end encrypted password manager (Lilith Wrapper)
+Depends: curl, python3
+
+Package: nixite
+Version: 0.1.0
+Architecture: amd64
+Filename: pool/xtra/nixite_0.1.0_amd64.deb
+Size: 780
+SHA256: 73936154e825ba96ad369482b26d84e993b9cb6f790bf1d0aeb46e0084ea10bf
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Nixite — minimalist text editor (Lilith Wrapper)
+Depends: git, curl
+
+Package: linuxtoys
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/xtra/linuxtoys_1.0.0_amd64.deb
+Size: 794
+SHA256: 207b3c3a157a3f261f695f21d127b982177d85c7f43257fa3e93f9720523a69c
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: LinuxToys — collection of interactive terminal toys (Lilith Wrapper)
+Depends: git, curl
+
+Package: keygeist
+Version: 0.1.0
+Architecture: amd64
+Filename: pool/xtra/keygeist_0.1.0_amd64.deb
+Size: 784
+SHA256: a03cf6e2ae17266f358de844245fdea038594fd885afd37e85e729c8826f6dff
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Keygeist — SSH agent UI manager (Lilith Wrapper)
+Depends: git, curl
+

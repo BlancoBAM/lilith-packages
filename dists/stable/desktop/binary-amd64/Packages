@@ -1,0 +1,140 @@
+Package: lilith-plasma
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-plasma_1.0.0_amd64.deb
+Size: 722
+SHA256: ade617e7a9b159bf3ea9fe253a6f32b448e38a27bded0337d0dd340467519955
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal KDE Plasma Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: plasma-desktop, sddm, systemsettings, plasma-workspace-wayland
+
+Package: lilith-xfce
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-xfce_1.0.0_amd64.deb
+Size: 704
+SHA256: 64b977962bf52c396171e65b260389034894f2c8af097ae7f11ff53bf9fc35aa
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal XFCE Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: xfce4, xfce4-session, xfwm4, xfce4-panel
+
+Package: lilith-lxde
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-lxde_1.0.0_amd64.deb
+Size: 702
+SHA256: 27ffc5616058e5dd34110406add0c9e4a348985d4cb95d2770709a4eb2e5fb71
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal LXDE Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: lxde-core, lxsession, openbox
+
+Package: lilith-lxqt
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-lxqt_1.0.0_amd64.deb
+Size: 696
+SHA256: 7643c62f0591aed313e34d4c1a50f875f5a0923630c96ca5fa00f382f1bd4c49
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal LXQt Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: lxqt-core, openbox
+
+Package: lilith-budgie
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-budgie_1.0.0_amd64.deb
+Size: 702
+SHA256: f33b4ddf39e4df8b4c15854b793b6abb71addf87b459089511a025dec199de0d
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal Budgie Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: budgie-desktop, budgie-indicator-applet
+
+Package: lilith-deepin
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-deepin_1.0.0_amd64.deb
+Size: 704
+SHA256: 5903f0b5f92569dc3beb3697eea647d37e706e759fe4a12e6984920399671226
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal Deepin Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: dde-session-ui, dde-desktop, deepin-wm
+
+Package: lilith-trinity
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-trinity_1.0.0_amd64.deb
+Size: 694
+SHA256: 3866e66598c6f09fc156b0be25412bdd977fd62f5f4d1aca72e1b86e9cf51fd2
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal Trinity Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: tde-trinity, tdm
+
+Package: lilith-enlightenment
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-enlightenment_1.0.0_amd64.deb
+Size: 696
+SHA256: 334ec88398cae36039bcab4eeafe9788dc3e12e0e9bc1073c7493ca0f53d807b
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal Enlightenment Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: enlightenment, terminology
+
+Package: lilith-pantheon
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-pantheon_1.0.0_amd64.deb
+Size: 706
+SHA256: 5a34261ba038de21b767cb4c485463a1e2d6594459915804cd601eafc4f837f7
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal Pantheon Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: pantheon-shell, gala, wingpanel, plank
+
+Package: lilith-gnome
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-gnome_1.0.0_amd64.deb
+Size: 704
+SHA256: 1079f4bb51381fee736d4ee319327c961a8c4d096c265e1965959d5849cd83ab
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal GNOME Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: gnome-session, gnome-shell, gnome-control-center
+
+Package: lilith-mate
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-mate_1.0.0_amd64.deb
+Size: 690
+SHA256: 9220fe9731bd86955f6b40b903af750cdb4a916b1f4b56e17bbc454234be2f3d
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal MATE Desktop Environment for Lilith Linux (Lilith Wrapper)
+Depends: mate-desktop-environment-core
+
+Package: lilith-i3
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-i3_1.0.0_amd64.deb
+Size: 708
+SHA256: e016dcdd008a4adffc6918b74c49e9d7f2f69777792d1963f6489dd275dda41b
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal i3 Window Manager for Lilith Linux (Lilith Wrapper)
+Depends: i3-wm, i3status, i3lock, dmenu
+
+Package: lilith-sway
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-sway_1.0.0_amd64.deb
+Size: 712
+SHA256: a6954e621c493db792e313922980219856ccbc68c861e1813b4b11032ac6a31f
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Minimal Sway Window Manager for Lilith Linux (Lilith Wrapper)
+Depends: sway, swaylock, swayidle, swaybg, wmenu
+
+Package: lilith-welcome
+Version: 1.0.0
+Architecture: amd64
+Filename: pool/desktop/lilith-welcome_1.0.0_amd64.deb
+Size: 2014
+SHA256: 84671dea2e9260c679b91c5c6405aa6da3a8d5f6ec07b9af6ea98588fd4387f2
+Maintainer: BlancoBAM <blancobam@protonmail.com>
+Description: Lilith Linux live-session welcome screen and Calamares installer launcher (Lilith Wrapper)
+Depends: curl, python3
+
