@@ -2,7 +2,7 @@
     "distro_name": "Lilith Linux",
     "base_ubuntu_codename": "resolute",
     "repo_url": "https://blancobam.github.io/lilith-packages",
-    "generated": "2026-06-07T00:05:47.075637Z",
+    "generated": "2026-06-07T00:35:38.672104Z",
     "custom_repository_overlay": {
         "name": "Lilith Custom Repo",
         "url": "https://blancobam.github.io/lilith-packages/",
