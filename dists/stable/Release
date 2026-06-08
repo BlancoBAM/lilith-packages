@@ -2,14 +2,14 @@ Origin: Lilith Linux
 Label: Lilith Linux Overlay
 Suite: stable
 Codename: stable
-Date: Sun, 07 Jun 2026 00:35:38 UTC
+Date: Mon, 08 Jun 2026 22:04:23 UTC
 Architectures: amd64
 Components: main xtra desktop
 Description: Thin package overlay for Lilith Linux (Ubuntu Resolute base)
 SHA256:
- 817c3178097b27c080b0d95bf7a0f737928bdf197d6f534b77221923d35966c1 13351 main/binary-amd64/Packages
- 4147d27d036c0976cd510cf2a3c9b9fd2c39c82784577ebbe7a28eeeb847f4a0 4413 main/binary-amd64/Packages.gz
- 954a1871fa2f97bdca48a3cc7238e2c27f31f59e95aa65fbc64bd49c891a01a8 3390 xtra/binary-amd64/Packages
- 17c1aa5c0a390a5ff2e3a07b5e141d441947dd3c8a516acbb2bd5dad50969eab 1185 xtra/binary-amd64/Packages.gz
- 93e8450512e10887f1d04c1a103eb8b7084e41df0f8ea1420dab80416e4786aa 5173 desktop/binary-amd64/Packages
- afc8d35cf8ab5e04e3e5398733220252a0df5646ad3d28d5ea8dac09cb4b25a1 1409 desktop/binary-amd64/Packages.gz
+ c6d728b2428764bc5407e98e785f67496f7b0c3b86bd188a53056641be57ee2a 13351 main/binary-amd64/Packages
+ 08b8d11546773eefed6ca277bc25d1ea073cfb1a07854360dafa64fbb43fc4cc 4410 main/binary-amd64/Packages.gz
+ a870242e06eb9ccc2f49c71b0c6a371391b848a14f758398aef2907d10e7310d 3809 xtra/binary-amd64/Packages
+ b41821ac6d83c2481fb4e8c494c25304eb3bd29b0ea16e90f257af368e5e1795 1328 xtra/binary-amd64/Packages.gz
+ fd3ab5173c65aed4a17c8557366e854b3e1b29f73290557395a2363162ae71d2 5173 desktop/binary-amd64/Packages
+ b08643d68b6a06b0a3d5e904b08ed7bd5cda96f672a49a6c39aa904a6b7fd26f 1407 desktop/binary-amd64/Packages.gz

@@ -368,6 +368,17 @@
             font-family: var(--mono);
         }
 
+        .component-count a {
+            color: var(--ember);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .component-count a:hover {
+            color: var(--infernal);
+            text-decoration: underline;
+        }
+
         /* ── Package table ───────────────────────────────────────────────── */
         .pkg-filter {
             display: flex;
@@ -649,6 +660,52 @@ sudo apt update</pre>
         </div>
     </section>
 
+    <!-- Integrated Ecosystem (Default Software Sources) -->
+    <section id="external-sources">
+        <div class="container">
+            <div class="section-label">Integrated Ecosystem</div>
+            <h2>Additional Default Software Sources</h2>
+            <p style="color: var(--text-muted); margin-bottom: 32px; max-width: 800px; font-size: 15px;">
+                Lilith Linux comes configured out of the box with multiple default software sources. While these upstream sources are not maintained by the developer of Lilith Linux, they are fully integrated into the <strong>Offerings</strong> app and pre-configured with the <strong>S8n-System</strong> for seamless command and package execution.
+            </p>
+            <div class="components-grid">
+                <div class="component-card">
+                    <div class="component-name">Pacstall</div>
+                    <div class="component-desc">AUR-inspired package manager for Ubuntu/Debian, providing access to thousands of community-maintained software packages.</div>
+                    <div class="component-count"><a href="https://pacstall.dev/packages" target="_blank">pacstall.dev/packages</a></div>
+                </div>
+                <div class="component-card">
+                    <div class="component-name">Ubuntu 26.04</div>
+                    <div class="component-desc">Upstream Resolute core system listings and full desktop manifests. Enabled natively for maximum package compatibility.</div>
+                    <div class="component-count">
+                        <a href="https://cdimage.ubuntu.com/ubuntu/releases/26.04/release/ubuntu-26.04-desktop-arm64.list" target="_blank">arm64.list</a> • 
+                        <a href="https://cdimage.ubuntu.com/ubuntu/releases/26.04/release/ubuntu-26.04-desktop-arm64.manifest" target="_blank">arm64.manifest</a>
+                    </div>
+                </div>
+                <div class="component-card">
+                    <div class="component-name">Soar</div>
+                    <div class="component-desc">High-performance distro-agnostic standalone package manager leveraging the modern SAB package format.</div>
+                    <div class="component-count"><a href="https://github.com/pkgforge/soarpkgs" target="_blank">github.com/pkgforge/soarpkgs</a></div>
+                </div>
+                <div class="component-card">
+                    <div class="component-name">AM App Manager</div>
+                    <div class="component-desc">The AppImage package manager and database containing hundreds of portable Linux apps and scripts.</div>
+                    <div class="component-count"><a href="https://portable-linux-apps.github.io/" target="_blank">portable-linux-apps.github.io</a></div>
+                </div>
+                <div class="component-card">
+                    <div class="component-name">Flatpak & Flathub</div>
+                    <div class="component-desc">Sandbox-packaged desktop applications and runtimes repository. Enabled by default.</div>
+                    <div class="component-count"><a href="https://flathub.org/en" target="_blank">flathub.org/en</a></div>
+                </div>
+                <div class="component-card">
+                    <div class="component-name">System Integrations</div>
+                    <div class="component-desc">Snaps, Homebrew, and Cargo are enabled by default. All associated command structures and software registries are pre-configured out of the box.</div>
+                    <div class="component-count">Snaps • Homebrew • Cargo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Package Table -->
     <section id="packages">
         <div class="container">
@@ -697,10 +754,9 @@ sudo apt update</pre>
     <!-- Footer -->
     <footer>
         <div class="footer-brand">
-            <strong>Lilith Linux</strong> — Built with darkness and love by BlancoBAM
+            <strong>Lilith Linux</strong> - Beauty meets power. Evil meets elegance.
         </div>
         <ul class="footer-links">
-            <li><a href="https://github.com/BlancoBAM/lil-build" target="_blank">lil-build</a></li>
             <li><a href="https://github.com/BlancoBAM" target="_blank">GitHub</a></li>
             <li><a href="public-key.asc">GPG Key</a></li>
         </ul>
@@ -709,51 +765,75 @@ sudo apt update</pre>
 </div>
 
 <script>
-// Package data
-const PACKAGES = [
-    { name: 'offerings', version: '1.0.2-beta-1', component: 'main', desc: 'Unified package manager GUI for Lilith Linux' },
-    { name: 'tweakers', version: '1.0.1', component: 'main', desc: 'System optimization and tweaks GUI' },
-    { name: 'lilim', version: '0.1.0', component: 'main', desc: 'AI Assistant with persistent memory (Lilith AI)' },
-    { name: 'stake', version: '0.2.3', component: 'main', desc: 'Lilith Stake CLI package manager tool' },
-    { name: 'ouija-pad', version: '1.1.0', component: 'main', desc: 'Lilith default text editor GUI' },
-    { name: 'lsd', version: '1.2.0', component: 'main', desc: 'Modern ls replacement with icons and colors' },
-    { name: 'zoxide', version: '0.9.9', component: 'main', desc: 'Smart cd — learns your most frequent directories' },
-    { name: 'bat', version: '0.26.1', component: 'main', desc: 'cat replacement with syntax highlighting' },
-    { name: 'topgrade', version: '17.5.0', component: 'main', desc: 'Upgrade everything — apt, cargo, npm, flatpak, etc.' },
-    { name: 'nushell', version: '0.103.0', component: 'main', desc: 'Nu shell — structured data shell written in Rust' },
-    { name: 'fd', version: '10.2.0', component: 'main', desc: 'Fast and user-friendly find alternative' },
-    { name: 'ripgrep', version: '14.1.1', component: 'main', desc: 'Fast line-oriented search tool' },
-    { name: 'starship', version: '1.22.1', component: 'main', desc: 'Cross-shell customizable prompt' },
-    { name: 'atuin', version: '18.4.0', component: 'main', desc: 'Magical shell history with sync and search' },
-    { name: 'procs', version: '0.14.10', component: 'main', desc: 'Modern ps replacement written in Rust' },
-    { name: 'just', version: '1.45.0', component: 'main', desc: 'Command runner / Makefile alternative' },
-    { name: 'flatpak', version: '1.15.10', component: 'main', desc: 'Application sandboxing and distribution framework' },
-    { name: 'gemini-cli', version: '0.43.0', component: 'main', desc: 'Google Gemini CLI — AI assistant in the terminal' },
-    { name: 'hellfire', version: '152.0a1', component: 'main', desc: 'HellFire Browser — privacy-focused Firefox for Lilith' },
-    { name: 'lilith-tts', version: '1.0.0', component: 'main', desc: 'Lilith Linux Text-to-Speech Engine (Rust daemon)' },
-    { name: 'lilith-grub-theme', version: '1.0.0', component: 'main', desc: 'Custom GRUB2 bootloader theme for Lilith Linux' },
-    { name: 'uutils-coreutils', version: '0.0.30', component: 'main', desc: 'Rust reimplementation of GNU coreutils' },
-    { name: 'soar', version: '1.0.0', component: 'main', desc: 'Fast distro-agnostic package manager (SAB format)' },
-    { name: 'astral-uv', version: '0.7.8', component: 'main', desc: 'Extremely fast Python package manager by Astral' },
-    // xtra
-    { name: 'ferdium', version: '7.1.2', component: 'xtra', desc: 'All-in-one messaging and service desktop app' },
-    { name: 'waveterm', version: '0.10.4', component: 'xtra', desc: 'Open-source AI-native terminal with visual blocks' },
-    { name: 'spacedrive', version: '0.4.2', component: 'xtra', desc: 'Open-source cross-platform file explorer' },
-    { name: 'open-interpreter', version: '0.4.2', component: 'xtra', desc: 'Local AI agent that can execute code' },
-    { name: 'proton-pass', version: 'latest', component: 'xtra', desc: 'End-to-end encrypted password manager' },
-    { name: 'lux-wine', version: '1.0.0', component: 'xtra', desc: 'Wine integration wrapper for Linux' },
-    { name: 'linuxtoys', version: '1.0.0', component: 'xtra', desc: 'Collection of interactive terminal toys' },
-    { name: 'noctua', version: '0.1.0', component: 'xtra', desc: 'Dark mode browser dashboard for COSMIC Desktop' },
-    // desktop
-    { name: 'lilith-plasma', version: '1.0.0', component: 'desktop', desc: 'Minimal KDE Plasma Desktop for Lilith Linux' },
-    { name: 'lilith-xfce', version: '1.0.0', component: 'desktop', desc: 'Minimal XFCE Desktop Environment for Lilith Linux' },
-    { name: 'lilith-gnome', version: '1.0.0', component: 'desktop', desc: 'Minimal GNOME Desktop Environment for Lilith Linux' },
-    { name: 'lilith-i3', version: '1.0.0', component: 'desktop', desc: 'Minimal i3 Window Manager for Lilith Linux' },
-    { name: 'lilith-sway', version: '1.0.0', component: 'desktop', desc: 'Minimal Sway Window Manager for Lilith Linux' },
-    { name: 'lilith-mate', version: '1.0.0', component: 'desktop', desc: 'Minimal MATE Desktop Environment for Lilith Linux' },
-    { name: 'lilith-lxqt', version: '1.0.0', component: 'desktop', desc: 'Minimal LXQt Desktop Environment for Lilith Linux' },
-    { name: 'lilith-budgie', version: '1.0.0', component: 'desktop', desc: 'Minimal Budgie Desktop Environment for Lilith Linux' },
-];
+// Dynamic Packages Fetch & Parser
+async function fetchPackagesForComponent(component) {
+    try {
+        const response = await fetch(`dists/stable/${component}/binary-amd64/Packages`);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const text = await response.text();
+        const pkgs = [];
+        const blocks = text.split('\n\n');
+        for (const block of blocks) {
+            if (!block.trim()) continue;
+            const pkg = { component };
+            const lines = block.split('\n');
+            let currentKey = null;
+            for (let line of lines) {
+                if (line.startsWith(' ') || line.startsWith('\t')) {
+                    // Continuation of previous key (like Description)
+                    if (currentKey === 'description' && pkg.desc) {
+                        pkg.desc += ' ' + line.trim();
+                    }
+                } else {
+                    const colonIdx = line.indexOf(':');
+                    if (colonIdx !== -1) {
+                        const key = line.substring(0, colonIdx).trim().toLowerCase();
+                        const val = line.substring(colonIdx + 1).trim();
+                        currentKey = key;
+                        if (key === 'package') pkg.name = val;
+                        if (key === 'version') pkg.version = val;
+                        if (key === 'description') pkg.desc = val;
+                    } else {
+                        currentKey = null;
+                    }
+                }
+            }
+            if (pkg.name) {
+                // Clean up description wrapper text
+                if (pkg.desc) {
+                    pkg.desc = pkg.desc.replace(/\s*\(Lilith Wrapper\)/g, '').trim();
+                } else {
+                    pkg.desc = '';
+                }
+                pkgs.push(pkg);
+            }
+        }
+        return pkgs;
+    } catch (e) {
+        console.error(`Error fetching packages for ${component}:`, e);
+        return [];
+    }
+}
+
+let PACKAGES = [];
+let ACTIVE_FILTER = 'all';
+
+async function loadAllPackages() {
+    const components = ['main', 'xtra', 'desktop'];
+    const results = await Promise.all(components.map(fetchPackagesForComponent));
+    PACKAGES = results.flat();
+    
+    // Sort packages alphabetically by name
+    PACKAGES.sort((a, b) => a.name.localeCompare(b.name));
+    
+    // Update stats bar count (it is the second stat-num)
+    const stats = document.querySelectorAll('.stat-num');
+    if (stats.length >= 2) {
+        stats[1].textContent = PACKAGES.length;
+    }
+
+    renderPkgs(ACTIVE_FILTER);
+}
 
 function renderPkgs(filter) {
     const tbody = document.getElementById('pkg-tbody');
@@ -769,6 +849,7 @@ function renderPkgs(filter) {
 }
 
 function filterPkgs(filter, btn) {
+    ACTIVE_FILTER = filter;
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     renderPkgs(filter);
@@ -791,7 +872,7 @@ function copyCode(id) {
 }
 
 // Init
-renderPkgs('all');
+loadAllPackages();
 </script>
 </body>
 </html>

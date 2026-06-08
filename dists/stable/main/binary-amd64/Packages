@@ -100,8 +100,8 @@ Package: lilith-grub-theme
 Version: 1.0.0
 Architecture: amd64
 Filename: pool/main/lilith-grub-theme_1.0.0_amd64.deb
-Size: 7737854
-SHA256: 8b164c84a99bd6400ff1f3ed59d7df34265c72fef16d060b4ce9c35b4d1ef3a2
+Size: 7737856
+SHA256: ef990173c6473a1ab22d65d9b90a6b275534d8069629c9bc97cda1da03fee1eb
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Custom grub2 bootloader theme for Lilith Linux (bundled offline)
 
@@ -110,7 +110,7 @@ Version: 0.1.3
 Architecture: amd64
 Filename: pool/main/s8n-system_0.1.3_amd64.deb
 Size: 750
-SHA256: b03b08ec49242ae9f8450436191eb14737108984bf594cb58a9ce0e0c7d507ac
+SHA256: 5ed48bbadea5fa10085fd548fd9f420d10ebc6e2d652c3cd82078143df1ff5dc
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Lilith System Package Manager CLI (s8n) (Lilith Wrapper)
 Depends: curl
@@ -119,8 +119,8 @@ Package: hellfire
 Version: 152.0a1
 Architecture: amd64
 Filename: pool/main/hellfire_152.0a1_amd64.deb
-Size: 1542
-SHA256: d4262192f0d8fff41ea3fff6ced2a23d6b7ad05062cd0e9919cc40143fb4c4f5
+Size: 1546
+SHA256: fe8a8efd49274125fc1fe53e93f5c568114bfb64ca2f1dc2ad4a0e0358666bfa
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: HellFire Browser — privacy-focused custom Firefox for Lilith Linux (Lilith Wrapper)
 Depends: curl, libfuse2t64
@@ -129,8 +129,8 @@ Package: browseros
 Version: 0.42.0.1
 Architecture: amd64
 Filename: pool/main/browseros_0.42.0.1_amd64.deb
-Size: 882
-SHA256: c6453b2a8a6de7a1bd80d69f31e0bd5b85a7b2040ae711f478be00c791d4c38d
+Size: 880
+SHA256: 5d9a69049077d003d06eae5c938a8c77f03722eaa641910b6e7184f3c801fbbc
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Lilith Default Web Browser OS AppImage (Lilith Wrapper)
 Depends: curl, libfuse2t64
@@ -140,7 +140,7 @@ Version: 3.4.1
 Architecture: amd64
 Filename: pool/main/hyper-terminal_3.4.1_amd64.deb
 Size: 870
-SHA256: ffdaf8182f3f3715267facab2a611b396344b3997ea7b37977363dcb7e69d1cf
+SHA256: e95f3f94df6bb333019a2bc8addf1909a3e3e945ee038e5a7b5d7aeac8ca8d27
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Hyper terminal emulator for Lilith Linux (Lilith Wrapper)
 Depends: curl, libfuse2t64
@@ -149,8 +149,8 @@ Package: vicinae
 Version: 0.21.0
 Architecture: amd64
 Filename: pool/main/vicinae_0.21.0_amd64.deb
-Size: 872
-SHA256: 866c2248d65b71a53e8d85603369a402077d3c04f33d3ac75ab22884f4e2ab72
+Size: 874
+SHA256: 02cb7f415c9f1e58c1ac0fd021ccd9c58fbe5535a3fb73cfe327f3765f0b6694
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Vicinae Visual Workspace AppImage (Lilith Wrapper)
 Depends: curl, libfuse2t64
@@ -159,8 +159,8 @@ Package: lilith-tts
 Version: 1.0.0
 Architecture: amd64
 Filename: pool/main/lilith-tts_1.0.0_amd64.deb
-Size: 886
-SHA256: 0fe1682ecf2f562e74357cefae53313ed45fca068ae9d5ebdaa3f2990aea7709
+Size: 890
+SHA256: 9101e42d1e6691e5357f8c46338f9ac4d360b957f33d4c4f5bae9c231283f8c0
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Lilith Linux Text-to-Speech Engine (Lilith Wrapper)
 Depends: git, curl
@@ -170,7 +170,7 @@ Version: 0.103.0
 Architecture: amd64
 Filename: pool/main/nushell_0.103.0_amd64.deb
 Size: 1076
-SHA256: 198157eda8bacc7ccc62acd3ff1d2ffa70553b7e8602c345eb0546b774c7443a
+SHA256: f586120b188bce22cfb4f4ae4c18892644a6efe9299ac5eab5edcf5111fc2115
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Nu shell — structured data shell written in Rust (Lilith Wrapper)
 Depends: curl, python3
@@ -179,8 +179,8 @@ Package: fd-lilith
 Version: 10.2.0
 Architecture: amd64
 Filename: pool/main/fd-lilith_10.2.0_amd64.deb
-Size: 1062
-SHA256: 8792d12f4ddbb5951df4b545ec01dd3f30bd65985c5f209531160ee5c63513c0
+Size: 1064
+SHA256: 9e1d2cf0968a635a8cdca4525e01658355c4d084892ec7242c07dda347734341
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: fd — fast and user-friendly find alternative (Lilith binary edition) (Lilith Wrapper)
 Depends: curl, python3
@@ -189,8 +189,8 @@ Package: rnr
 Version: 0.4.1
 Architecture: amd64
 Filename: pool/main/rnr_0.4.1_amd64.deb
-Size: 1014
-SHA256: 41cabe3ae862e977b89390e2a2d51e3dc4a9cca3deea2b3c0fc76df65beccc1a
+Size: 1020
+SHA256: 8dfff57a6ac52613f90f351e85336bf8dff833e965b77c9c868c83a563cbab2f
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: rnr — batch rename files using regex patterns (Lilith Wrapper)
 Depends: curl, python3
@@ -199,8 +199,8 @@ Package: systeroid
 Version: 0.4.5
 Architecture: amd64
 Filename: pool/main/systeroid_0.4.5_amd64.deb
-Size: 1024
-SHA256: 84c42177fe5499c68ee89ffe285f3e19d3e8cf64acdeeb6d6753142c82bbeb8e
+Size: 1026
+SHA256: d76c767e182371aa88d8c9fbf25e31cd9a5c31056cc4cb3059d1e30223d92349
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: systeroid — interactive sysctl TUI manager (Lilith Wrapper)
 Depends: curl, python3
@@ -209,8 +209,8 @@ Package: navi
 Version: 2.24.0
 Architecture: amd64
 Filename: pool/main/navi_2.24.0_amd64.deb
-Size: 1026
-SHA256: 08650819eacd89181d835c7cda7926b1d4d65b53fad03f1a08d0dea337c0b7a4
+Size: 1028
+SHA256: 6ce5b76dfa65d070b258fa680ef4c54644d5c56702006ef788ca941eddc35d45
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: navi — interactive cheatsheet tool for the command line (Lilith Wrapper)
 Depends: curl, python3
@@ -219,8 +219,8 @@ Package: xcp
 Version: 0.24.8
 Architecture: amd64
 Filename: pool/main/xcp_0.24.8_amd64.deb
-Size: 860
-SHA256: 8ad9829ce4d537a536670c449d12c2884aab5cafa62916ac61dedf0cb8ee8a7e
+Size: 862
+SHA256: 235bd41f94d34c5ca096966ec76c02a97b2b877dfa68132cfa373e31a2f34bac
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: xcp — extended cp with progress bars and parallel copy (Lilith Wrapper)
 Depends: curl
@@ -229,8 +229,8 @@ Package: kibi
 Version: 0.9.5
 Architecture: amd64
 Filename: pool/main/kibi_0.9.5_amd64.deb
-Size: 1032
-SHA256: 6ff1397514191c05f1073e32c88b4ba5d64e675d4f5a8b0048262b9dab79e583
+Size: 1036
+SHA256: baad2d538c8a861a1f99542952ba584f81b72cb578455bd08f74d4617ea8b057
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: kibi — tiny configurable text editor in < 1024 lines of Rust (Lilith Wrapper)
 Depends: curl, python3
@@ -239,8 +239,8 @@ Package: czkawka
 Version: 8.0.0
 Architecture: amd64
 Filename: pool/main/czkawka_8.0.0_amd64.deb
-Size: 944
-SHA256: cdecdb7c151bf959074b5259ff54481dd410765372f8711582b1eadbc7854d37
+Size: 946
+SHA256: bfd5ee4bac865e341b043bc5f305cf6e2f95368b70a28b7085a6559f62a58e53
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: czkawka — fast duplicate file finder with CLI and GUI (Lilith Wrapper)
 Depends: curl, python3
@@ -249,8 +249,8 @@ Package: astral-uv
 Version: 0.7.8
 Architecture: amd64
 Filename: pool/main/astral-uv_0.7.8_amd64.deb
-Size: 1062
-SHA256: db5a6b97895cb1eeb346964cf02776801dc3744a94eb0287d29d3ee44845ceb9
+Size: 1066
+SHA256: f5f7034e405a124db2c9d00a19010a3f71a157b028511370af62968414b40912
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: uv — extremely fast Python package and project manager by Astral (Lilith Wrapper)
 Depends: curl, python3
@@ -259,8 +259,8 @@ Package: gemini-cli
 Version: 0.43.0
 Architecture: amd64
 Filename: pool/main/gemini-cli_0.43.0_amd64.deb
-Size: 780
-SHA256: 8f4babc62c0f17d1e3cc7631d6f562b9a27de056a6a2ca6556dd070c0c1ab928
+Size: 782
+SHA256: 5674e7c9d1d54e4ecead82f19a5c1ff36fdaa105e1fc48e0522c399667c0ff06
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Google Gemini CLI — AI assistant in the terminal (Lilith Wrapper)
 Depends: nodejs, npm
@@ -269,8 +269,8 @@ Package: pacstall-wrapper
 Version: 6.2.1
 Architecture: amd64
 Filename: pool/main/pacstall-wrapper_6.2.1_amd64.deb
-Size: 848
-SHA256: ba205c7f3708eaf49f31a476d6b226c9c6075ef2113dba77c7e3bbfa18c8546f
+Size: 850
+SHA256: a13fc3d169515e755c71a73bd3148ddb7a95eaa1c7f0f441083917cce9ca0212
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: pacstall — AUR-inspired package manager for Ubuntu/Debian (Lilith Wrapper)
 Depends: curl, git, wget
@@ -279,8 +279,8 @@ Package: soar
 Version: 1.0.0
 Architecture: amd64
 Filename: pool/main/soar_1.0.0_amd64.deb
-Size: 768
-SHA256: 5c8c4f61df0cb413d92345f6c14df256b5f199341f6c0581219e283e8c58d0b7
+Size: 770
+SHA256: 9544364614c3c3959c3dc24b7d8fae101dc985ca9795ea4b5bce13420eb7e22f
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: soar — fast distro-agnostic SAB package manager (Lilith Wrapper)
 Depends: curl
@@ -290,7 +290,7 @@ Version: 1.2.4
 Architecture: amd64
 Filename: pool/main/simplemoji_1.2.4_amd64.deb
 Size: 954
-SHA256: 299a1218c0df2b49adb8f3c467e3cad6817ac5b9225468e5634311127f17bfb4
+SHA256: 8cc60a9f68715186a35a395dbe88883a40a0375bb0c5384a3ffcf644ad5fab77
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Simplemoji — emoji picker for COSMIC/GTK environments (Lilith Wrapper)
 Depends: curl, python3
@@ -300,7 +300,7 @@ Version: 2024.11.19
 Architecture: amd64
 Filename: pool/main/fluent-icon-theme-installer_2024.11.19_amd64.deb
 Size: 744
-SHA256: 999e94220eb94149e24f1734aaaca6d59270e92673f1e756c9fcbff5ffebf3ae
+SHA256: 4194f909075e14da82fe40a3e9b074afeefc7aad535850db74bbaa42ffb5bd32
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Fluent icon theme — modern flat icon theme for Linux desktops (Lilith Wrapper)
 Depends: git
@@ -309,8 +309,8 @@ Package: pling-store-wrapper
 Version: 5.0.2
 Architecture: amd64
 Filename: pool/main/pling-store-wrapper_5.0.2_amd64.deb
-Size: 936
-SHA256: 7d52fcaeaa0a3223713348bd9a956e0fc58f9f1c4c856a7c1d1984e301c22fce
+Size: 942
+SHA256: 3551212339b139d6b5a1288e6b4977fd50025868f1ba2e294a9553571a5847c9
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Pling Store — desktop app discovery and installation client (Lilith Wrapper)
 Depends: curl, libfuse2t64
@@ -320,7 +320,7 @@ Version: 3.45.1
 Architecture: amd64
 Filename: pool/main/script-kit-wrapper_3.45.1_amd64.deb
 Size: 1164
-SHA256: 2370cb951ee1ca103c0398ac04de9430f1c00141478db8119b3d00e42859dc44
+SHA256: 125c439131d6eef9843f2e53ab634297770ab2f32b7cd4f92042817dcb156dd7
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Script Kit — automate anything with JavaScript scripts (Lilith Wrapper)
 Depends: curl, libfuse2t64, python3
@@ -330,7 +330,7 @@ Version: 1.0.0
 Architecture: amd64
 Filename: pool/main/cosmic-uniform-glass-theme-installer_1.0.0_amd64.deb
 Size: 752
-SHA256: b74c2d85a94c97f738138fa7a8c53309609c5a1588966b3d1fcc2e3bec778265
+SHA256: 0734fbe068ad0aafc4d385bc8db3cca71c7c226e959c074fc906e2a3ca33bb05
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: COSMIC Uniform Glass — frosted glass theme for COSMIC Desktop (Lilith Wrapper)
 Depends: git
@@ -339,8 +339,8 @@ Package: uutils-coreutils-wrapper
 Version: 0.0.30
 Architecture: amd64
 Filename: pool/main/uutils-coreutils-wrapper_0.0.30_amd64.deb
-Size: 858
-SHA256: 4373eff64a420a30b502b004edb30a919d4c932c6c35a08f5638378880f223f2
+Size: 860
+SHA256: cc593d29496dfb673729d79d5d806d41e7c6811a884d4edcad8b14e893fd6d43
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: uutils coreutils — Rust reimplementation of GNU coreutils (wrapper) (Lilith Wrapper)
 
@@ -348,8 +348,8 @@ Package: noto-color-emoji
 Version: 2.047
 Architecture: amd64
 Filename: pool/main/noto-color-emoji_2.047_amd64.deb
-Size: 658
-SHA256: 8daa538d76beadfaf281b0ad69877ba985b6f5b20ad8a4fc305ba89b48fca5c0
+Size: 660
+SHA256: 88be1613a2d71996b407f7fa0c0afd5a9d7a81b767d42758fbfca19a116a9f31
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Noto Color Emoji font from Google Fonts (Lilith Wrapper)
 
@@ -357,8 +357,8 @@ Package: flatpak-flathub
 Version: 1.15.10
 Architecture: amd64
 Filename: pool/main/flatpak-flathub_1.15.10_amd64.deb
-Size: 712
-SHA256: 434efaf77027651db8a0f31219f34356959fef56fb5b80431564dd29788de541
+Size: 716
+SHA256: f3073fa67db4156a9c9f36e2356efb996f8d80ec17a386bbeb47cc43f162f82c
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Flatpak with Flathub remote configured (Lilith Wrapper)
 
