@@ -460,7 +460,7 @@
             font-family: var(--mono);
         }
 
-        .pkg-component.main { background: rgba(192, 57, 43, 0.15); color: var(--ember); }
+        .pkg-component.core { background: rgba(192, 57, 43, 0.15); color: var(--ember); }
         .pkg-component.xtra { background: rgba(255, 107, 53, 0.15); color: var(--infernal); }
         .pkg-component.desktop { background: rgba(139, 26, 26, 0.2); color: #C46060; }
 
@@ -595,7 +595,7 @@
   | sudo gpg --dearmor -o /usr/share/keyrings/lilith-archive-keyring.gpg
 
 echo <span class="arg">"deb [arch=amd64 signed-by=/usr/share/keyrings/lilith-archive-keyring.gpg] \
-  https://blancobam.github.io/lilith-packages stable main xtra"</span> \
+  https://blancobam.github.io/lilith-packages stable core xtra"</span> \
   | sudo tee /etc/apt/sources.list.d/lilith-linux.list
 
 sudo apt update && sudo apt install <span class="arg">offerings tweakers lilim stake ouija-pad</span></pre>
@@ -612,7 +612,7 @@ gpg --dearmor public-key.asc | sudo tee /usr/share/keyrings/lilith-archive-keyri
 
 <span class="comment"># Step 3: Add source line</span>
 sudo nano /etc/apt/sources.list.d/lilith-linux.list
-<span class="comment"># Paste: deb [arch=amd64 signed-by=/usr/share/keyrings/lilith-archive-keyring.gpg] https://blancobam.github.io/lilith-packages stable main xtra</span>
+<span class="comment"># Paste: deb [arch=amd64 signed-by=/usr/share/keyrings/lilith-archive-keyring.gpg] https://blancobam.github.io/lilith-packages stable core xtra</span>
 
 <span class="comment"># Step 4: Update</span>
 sudo apt update</pre>
@@ -622,7 +622,7 @@ sudo apt update</pre>
                     <div class="code-block">
                         <button class="copy-btn" onclick="copyCode('source-code')">copy</button>
                         <pre id="source-code"><span class="comment"># /etc/apt/sources.list.d/lilith-linux.list</span>
-<span class="arg">deb [arch=amd64 signed-by=/usr/share/keyrings/lilith-archive-keyring.gpg] https://blancobam.github.io/lilith-packages stable main xtra</span></pre>
+<span class="arg">deb [arch=amd64 signed-by=/usr/share/keyrings/lilith-archive-keyring.gpg] https://blancobam.github.io/lilith-packages stable core xtra</span></pre>
                     </div>
                 </div>
             </div>
@@ -642,7 +642,7 @@ sudo apt update</pre>
             <h2>Components</h2>
             <div class="components-grid">
                 <div class="component-card">
-                    <div class="component-name">main</div>
+                    <div class="component-name">core</div>
                     <div class="component-desc">Core Lilith Linux packages. Installed by default on every Lilith Linux system. Includes GUI apps, CLI tools, and system utilities.</div>
                     <div class="component-count">~40 packages</div>
                 </div>
@@ -713,7 +713,7 @@ sudo apt update</pre>
             <h2>Packages</h2>
             <div class="pkg-filter">
                 <button class="filter-btn active" onclick="filterPkgs('all', this)">All</button>
-                <button class="filter-btn" onclick="filterPkgs('main', this)">main</button>
+                <button class="filter-btn" onclick="filterPkgs('core', this)">core</button>
                 <button class="filter-btn" onclick="filterPkgs('xtra', this)">xtra</button>
                 <button class="filter-btn" onclick="filterPkgs('desktop', this)">desktop</button>
             </div>
@@ -819,7 +819,7 @@ let PACKAGES = [];
 let ACTIVE_FILTER = 'all';
 
 async function loadAllPackages() {
-    const components = ['main', 'xtra', 'desktop'];
+    const components = ['core', 'xtra', 'desktop'];
     const results = await Promise.all(components.map(fetchPackagesForComponent));
     PACKAGES = results.flat();
     

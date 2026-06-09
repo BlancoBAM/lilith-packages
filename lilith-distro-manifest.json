@@ -2,11 +2,11 @@
     "distro_name": "Lilith Linux",
     "base_ubuntu_codename": "resolute",
     "repo_url": "https://blancobam.github.io/lilith-packages",
-    "generated": "2026-06-08T22:10:04.579292Z",
+    "generated": "2026-06-09T00:24:51.308786Z",
     "custom_repository_overlay": {
         "name": "Lilith Custom Repo",
         "url": "https://blancobam.github.io/lilith-packages/",
-        "apt_source": "deb [arch=amd64 trusted=yes] https://blancobam.github.io/lilith-packages stable main xtra desktop",
+        "apt_source": "deb [arch=amd64 trusted=yes] https://blancobam.github.io/lilith-packages stable core xtra desktop",
         "components": {
             "core": [
                 "offerings",
@@ -45,7 +45,8 @@
                 "cosmic-uniform-glass-theme-installer",
                 "uutils-coreutils-wrapper",
                 "noto-color-emoji",
-                "flatpak-flathub"
+                "flatpak-flathub",
+                "lilith-welcome"
             ],
             "xtra": [
                 "ferdium",
@@ -73,8 +74,7 @@
                 "lilith-gnome",
                 "lilith-mate",
                 "lilith-i3",
-                "lilith-sway",
-                "lilith-welcome"
+                "lilith-sway"
             ]
         }
     },

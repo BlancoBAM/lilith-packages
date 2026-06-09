@@ -2,8 +2,8 @@ Package: ferdium
 Version: 7.1.2
 Architecture: amd64
 Filename: pool/xtra/ferdium_7.1.2_amd64.deb
-Size: 870
-SHA256: f8211eab7c6bb26db143b98d96b1740958041f337856d3a57c435561a4adacae
+Size: 872
+SHA256: ebd739d00b4173bfd94cb51a7ebb3158e1c9ca921dd637b1077054f6b1a3bcfd
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Ferdium — all-in-one messaging desktop app (Lilith Wrapper)
 Depends: curl, libfuse2t64
@@ -13,7 +13,7 @@ Version: 0.10.4
 Architecture: amd64
 Filename: pool/xtra/waveterm_0.10.4_amd64.deb
 Size: 1034
-SHA256: 3e9a123520d59bb52816abe09b3979bb993c1b43c6ef911baa1e0311f67b8461
+SHA256: 458033ab87b2d29e65e4484cc5bbbc8b8ddd46a8ec0f6797dd399722b5fde887
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: WaveTerm — open-source AI-native terminal with visual blocks (Lilith Wrapper)
 Depends: curl, python3
@@ -22,8 +22,8 @@ Package: webi-installers
 Version: 1.0.0
 Architecture: amd64
 Filename: pool/xtra/webi-installers_1.0.0_amd64.deb
-Size: 702
-SHA256: 88b123f4e4acfc8af51f207f63b0410c9ef548cf5cec8cd5c03108c7fb760099
+Size: 700
+SHA256: 7a9c34c02b640f98c3c8263dab7251ea286a7e007815376e836f96e3b2aa1488
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Webi — easy curl-based installers for developer tools (Lilith Wrapper)
 Depends: curl
@@ -32,8 +32,8 @@ Package: open-interpreter
 Version: 0.4.2
 Architecture: amd64
 Filename: pool/xtra/open-interpreter_0.4.2_amd64.deb
-Size: 652
-SHA256: ef325b314c4598d6edaa3fbbc67332b7dd3428d92028b0dbe7c4bfdac977b085
+Size: 650
+SHA256: 9093beea3c388087fd00dddf2d435909f6e19e034dc40e6a9c62494c0934cff4
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Open Interpreter — local AI agent that can execute code (Lilith Wrapper)
 Depends: python3, python3-pip
@@ -43,7 +43,7 @@ Version: 1.0.0
 Architecture: amd64
 Filename: pool/xtra/bashsenpai_1.0.0_amd64.deb
 Size: 644
-SHA256: 4f39e4ea97fa09b0e08c12eeb14c578f39b03045364ce79674afa3e933c60bb6
+SHA256: 357a8f38b22dc24d786b8975f68cdc049d820a0daa470db4fa70a4ad326be71f
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: BashSenpai — terminal AI assistant for bash commands (Lilith Wrapper)
 Depends: python3, python3-pip
@@ -52,8 +52,8 @@ Package: spacedrive
 Version: 0.4.2
 Architecture: amd64
 Filename: pool/xtra/spacedrive_0.4.2_amd64.deb
-Size: 1006
-SHA256: 50d2573cd5018363fc7000eb896763889660b7fcf267f5e3a988ed297a7a9bd4
+Size: 1008
+SHA256: c85ad16418b0f21538d44b46afddcfdb99bfb7ce570785e566eb0c03e49fbe61
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Spacedrive — cross-platform open-source file explorer (Lilith Wrapper)
 Depends: curl, python3
@@ -62,8 +62,8 @@ Package: proton-pass
 Version: 1.0.0
 Architecture: amd64
 Filename: pool/xtra/proton-pass_1.0.0_amd64.deb
-Size: 986
-SHA256: 54b16f160df0a79eec5d4dd97d1fd4902df15a6210712b8edaa552f453c17dec
+Size: 982
+SHA256: a1e3e9ec32a9d942b83c2a3d0add7f60a7c764db7914ad6d1405f566ed1ce668
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Proton Pass — end-to-end encrypted password manager (Lilith Wrapper)
 Depends: curl, python3
@@ -73,7 +73,7 @@ Version: 0.1.0
 Architecture: amd64
 Filename: pool/xtra/nixite_0.1.0_amd64.deb
 Size: 886
-SHA256: b5d922a75f4670b474267c4419b74be98b645a02672607335bb7ffd6fe055e4c
+SHA256: a0ae2d09b1b94b3c38fffd747adcf50891f5a6df9be25ffe645fafa5c795cb9f
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Nixite — minimalist text editor (Lilith Wrapper)
 Depends: git, curl
@@ -83,7 +83,7 @@ Version: 1.0.0
 Architecture: amd64
 Filename: pool/xtra/linuxtoys_1.0.0_amd64.deb
 Size: 898
-SHA256: b72fa6c724b130bf42cdbfdbd757e6b614225031c63dde5f69339d890e45cf8d
+SHA256: b0b2fd796294c53f8f44143ca148c6afb92ae9c9df7149c96a3b6415f339025f
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: LinuxToys — collection of interactive terminal toys (Lilith Wrapper)
 Depends: git, curl
@@ -92,8 +92,8 @@ Package: keygeist
 Version: 0.1.0
 Architecture: amd64
 Filename: pool/xtra/keygeist_0.1.0_amd64.deb
-Size: 886
-SHA256: ac96959de6737016d36101c542842726e0d3fc0415cefee1ec66ec9010f3dc09
+Size: 884
+SHA256: 79e2ea19aba60e825478de3e82c401dad0c79a7a023f91297fe08c1870660fd2
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: Keygeist — SSH agent UI manager (Lilith Wrapper)
 Depends: git, curl
@@ -102,8 +102,8 @@ Package: cosmic-connect
 Version: 1.0.0
 Architecture: amd64
 Filename: pool/xtra/cosmic-connect_1.0.0_amd64.deb
-Size: 936
-SHA256: 342aa8029c897a1b13dc13e24b7e0c17172c8e436ec32179adf4b65bce069ba1
+Size: 934
+SHA256: d53a12f5266236cda600d33bacbf9c22f43fafee2c91a187629febf00b95947a
 Maintainer: BlancoBAM <blancobam@protonmail.com>
 Description: COSMIC Connect — KDE Connect integration applet for COSMIC Desktop (Lilith Wrapper)
 Depends: git, curl, cargo, rustc, libdbus-1-dev, libsecret-1-dev, pkg-config

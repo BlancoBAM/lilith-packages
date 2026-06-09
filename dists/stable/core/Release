@@ -1,0 +1,7 @@
+Origin: Lilith Linux
+Label: Lilith Linux Core
+Suite: stable
+Version: 1.0.0
+Component: core
+Architecture: amd64
+Description: Lilith Linux Core overlay packages
