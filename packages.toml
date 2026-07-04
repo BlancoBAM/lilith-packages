@@ -1,0 +1,1759 @@
+# Lilith Linux Package Registry
+# URL: https://blancobam.github.io/lilith-packages/packages.toml
+# Format consumed by s8n — do not edit manually, use generate-packages-toml.py
+# Packages: 179
+
+[meta]
+name    = "Lilith Linux Packages"
+version = "2"
+updated = "2026-07-04"
+
+# install types:
+#   deb      → download .deb from url, sudo dpkg -i
+#   cargo    → cargo install crate_name
+#   github   → fetch latest release from github matching asset pattern
+#   appimage → download AppImage, chmod +x, symlink binary
+#   tarball  → download tarball, extract binary
+#   binary   → download binary directly
+#   script   → curl url | sh
+#   git      → git clone url, run install_cmd
+#   npm      → npm install -g npm_name
+#   pip      → pip3 install pip_name
+#   apt      → sudo apt install apt_name
+#   flatpak  → flatpak install flathub flatpak_id
+
+[[packages]]
+name        = "s8n"
+description = "Lilith unified system/package/file manager TUI"
+version     = "0.4.0"
+category    = "core"
+install     = "cargo"
+github      = "BlancoBAM/S8n-System"
+binary      = "s8n"
+crate_name  = "s8n"
+
+[[packages]]
+name        = "offerings"
+description = "Unified package manager GUI for Lilith Linux"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "BlancoBAM/Offerings"
+asset       = "amd64.deb"
+binary      = "offerings"
+
+[[packages]]
+name        = "tweakers"
+description = "System optimization and tweaks GUI"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "BlancoBAM/Tweakers"
+asset       = "amd64.deb"
+binary      = "tweakers"
+
+[[packages]]
+name        = "lilim"
+description = "Lilith AI Assistant with persistent memory"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "BlancoBAM/Lilim"
+asset       = "amd64.deb"
+binary      = "lilim"
+
+[[packages]]
+name        = "ouija-pad"
+description = "Lilith default text editor"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "BlancoBAM/Ouija-Pad"
+asset       = "amd64.deb"
+binary      = "ouija-pad"
+
+[[packages]]
+name        = "stake"
+description = "Lilith Stake CLI package manager tool"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "BlancoBAM/Stake"
+asset       = "amd64.deb"
+binary      = "stake"
+
+[[packages]]
+name        = "lilith-tts"
+description = "Lilith Linux Text-to-Speech Engine daemon"
+version     = "latest"
+category    = "core"
+install     = "cargo"
+github      = "BlancoBAM/Lilith-TTS"
+binary      = "lilith-tts-daemon"
+
+[[packages]]
+name        = "bat"
+description = "A cat clone with syntax highlighting and Git integration"
+version     = "0.26.1"
+category    = "core"
+install     = "deb"
+url         = "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat_0.26.1_amd64.deb"
+github      = "sharkdp/bat"
+asset       = "amd64.deb"
+binary      = "bat"
+
+[[packages]]
+name        = "lsd"
+description = "Modern ls replacement with colors and icons"
+version     = "1.2.0"
+category    = "core"
+install     = "deb"
+url         = "https://github.com/lsd-rs/lsd/releases/download/v1.2.0/lsd_1.2.0_amd64.deb"
+github      = "lsd-rs/lsd"
+asset       = "amd64.deb"
+binary      = "lsd"
+
+[[packages]]
+name        = "eza"
+description = "A modern replacement for ls"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "eza-community/eza"
+asset       = "eza_x86_64-unknown-linux-gnu.tar.gz"
+binary      = "eza"
+
+[[packages]]
+name        = "nat"
+description = "ls replacement with readable permissions"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "willdoescode/nat"
+binary      = "nat"
+
+[[packages]]
+name        = "zoxide"
+description = "Smart cd — learns your most frequent directories"
+version     = "0.9.9"
+category    = "core"
+install     = "deb"
+url         = "https://github.com/ajeetdsouza/zoxide/releases/download/v0.9.9/zoxide_0.9.9-1_amd64.deb"
+github      = "ajeetdsouza/zoxide"
+asset       = "amd64.deb"
+binary      = "zoxide"
+
+[[packages]]
+name        = "fd"
+description = "Fast user-friendly find alternative"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "sharkdp/fd"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "fd"
+
+[[packages]]
+name        = "ripgrep"
+description = "Fast line-oriented search tool (rg)"
+version     = "latest"
+category    = "core"
+install     = "deb"
+github      = "BurntSushi/ripgrep"
+asset       = "amd64.deb"
+binary      = "rg"
+
+[[packages]]
+name        = "ripgrep-all"
+description = "ripgrep over PDFs, Office docs, zip files (rga)"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "phiresky/ripgrep-all"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "rga"
+
+[[packages]]
+name        = "repgrep"
+description = "Interactive ripgrep result replacement TUI"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "acheronfail/repgrep"
+binary      = "rgr"
+crate_name  = "repgrep"
+
+[[packages]]
+name        = "delta"
+description = "Syntax-highlighting pager for git diffs"
+version     = "latest"
+category    = "core"
+install     = "deb"
+github      = "dandavison/delta"
+asset       = "amd64.deb"
+binary      = "delta"
+
+[[packages]]
+name        = "difftastic"
+description = "Structural diff tool that understands syntax"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "Wilfred/difftastic"
+binary      = "difft"
+crate_name  = "difftastic"
+
+[[packages]]
+name        = "hyperfine"
+description = "Command-line benchmarking tool"
+version     = "latest"
+category    = "core"
+install     = "deb"
+github      = "sharkdp/hyperfine"
+asset       = "amd64.deb"
+binary      = "hyperfine"
+
+[[packages]]
+name        = "hexyl"
+description = "Command-line hex viewer"
+version     = "latest"
+category    = "xtra"
+install     = "deb"
+github      = "sharkdp/hexyl"
+asset       = "amd64.deb"
+binary      = "hexyl"
+
+[[packages]]
+name        = "dust"
+description = "Intuitive du replacement written in Rust"
+version     = "latest"
+category    = "core"
+install     = "deb"
+github      = "bootandy/dust"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "dust"
+
+[[packages]]
+name        = "dua-cli"
+description = "Interactive disk space analyzer"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "Byron/dua-cli"
+binary      = "dua"
+crate_name  = "dua-cli"
+
+[[packages]]
+name        = "procs"
+description = "Modern ps replacement written in Rust"
+version     = "latest"
+category    = "core"
+install     = "apt"
+binary      = "procs"
+apt_name    = "procs"
+
+[[packages]]
+name        = "bottom"
+description = "Cross-platform graphical process monitor (btm)"
+version     = "latest"
+category    = "core"
+install     = "deb"
+github      = "ClementTsang/bottom"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "btm"
+
+[[packages]]
+name        = "zenith"
+description = "System monitor with zoom-able charts"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "bvaisvil/zenith"
+binary      = "zenith"
+crate_name  = "zenith"
+
+[[packages]]
+name        = "ytop"
+description = "Terminal system monitor (btm predecessor)"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "cjbassi/ytop"
+binary      = "ytop"
+crate_name  = "ytop"
+
+[[packages]]
+name        = "starship"
+description = "Cross-shell customizable prompt"
+version     = "latest"
+category    = "core"
+install     = "apt"
+binary      = "starship"
+apt_name    = "starship"
+
+[[packages]]
+name        = "atuin"
+description = "Magical shell history with sync and search"
+version     = "latest"
+category    = "core"
+install     = "apt"
+binary      = "atuin"
+apt_name    = "atuin"
+
+[[packages]]
+name        = "nushell"
+description = "Nu shell — structured data shell written in Rust"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "nushell/nushell"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "nu"
+
+[[packages]]
+name        = "just"
+description = "Command runner and Makefile alternative"
+version     = "latest"
+category    = "core"
+install     = "apt"
+binary      = "just"
+apt_name    = "just"
+
+[[packages]]
+name        = "xcp"
+description = "Extended cp with progress bars and parallel copy"
+version     = "latest"
+category    = "core"
+install     = "cargo"
+github      = "tarka/xcp"
+binary      = "xcp"
+crate_name  = "xcp"
+
+[[packages]]
+name        = "sd"
+description = "Intuitive find & replace CLI (sed alternative)"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "chmln/sd"
+binary      = "sd"
+crate_name  = "sd"
+
+[[packages]]
+name        = "sad"
+description = "Space Age seD — find & replace with diff preview"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "ms-jpq/sad"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "sad"
+
+[[packages]]
+name        = "rnr"
+description = "Batch rename tool written in Rust"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "ismaelgv/rnr"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "rnr"
+
+[[packages]]
+name        = "rip"
+description = "Safe rm replacement with trash/graveyard support"
+version     = "latest"
+category    = "core"
+install     = "cargo"
+github      = "nivekuil/rip"
+binary      = "rip"
+crate_name  = "rm-improved"
+
+[[packages]]
+name        = "fuc"
+description = "Modern cp/rm implementations — cpz and rmz"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "SUPERCILEX/fuc"
+binary      = "cpz"
+crate_name  = "fuc"
+
+[[packages]]
+name        = "shred-rust"
+description = "Secure file deletion tool in Rust"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "JuanJMarques/shred-rust"
+binary      = "shred"
+crate_name  = "shred"
+
+[[packages]]
+name        = "choose"
+description = "Human-friendly cut/awk field selector"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "theryangeary/choose"
+binary      = "choose"
+crate_name  = "choose"
+
+[[packages]]
+name        = "hck"
+description = "High-performance cut replacement"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "sstadick/hck"
+binary      = "hck"
+crate_name  = "hck"
+
+[[packages]]
+name        = "tokei"
+description = "Count lines of code by language"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "XAMPPRocky/tokei"
+binary      = "tokei"
+crate_name  = "tokei"
+
+[[packages]]
+name        = "huniq"
+description = "Remove duplicate lines from stdin (uniq without sorting)"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "koraa/huniq"
+binary      = "huniq"
+crate_name  = "huniq"
+
+[[packages]]
+name        = "rargs"
+description = "xargs with pattern matching (like xargs + awk)"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "lotabout/rargs"
+binary      = "rargs"
+crate_name  = "rargs"
+
+[[packages]]
+name        = "argc"
+description = "Bash argument parser and command runner"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "sigoden/argc"
+binary      = "argc"
+crate_name  = "argc"
+
+[[packages]]
+name        = "stringsext"
+description = "Find multi-byte encoded strings in binary files"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "getreu/stringsext"
+binary      = "stringsext"
+crate_name  = "stringsext"
+
+[[packages]]
+name        = "xh"
+description = "Friendly and fast HTTP client (HTTPie alternative)"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "ducaale/xh"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "xh"
+
+[[packages]]
+name        = "dog"
+description = "User-friendly DNS lookup tool"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "ogham/dog"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "dog"
+
+[[packages]]
+name        = "dqy"
+description = "Modern DNS query tool"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "dandyvica/dqy"
+binary      = "dqy"
+crate_name  = "dqy"
+
+[[packages]]
+name        = "json-env"
+description = "Inject JSON values into process environment"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "brodo/json_env"
+binary      = "json_env"
+crate_name  = "json_env"
+
+[[packages]]
+name        = "gping"
+description = "Graphical ping with live chart"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "orf/gping"
+binary      = "gping"
+crate_name  = "gping"
+
+[[packages]]
+name        = "bandwhich"
+description = "Terminal bandwidth utilization tool"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "imsnif/bandwhich"
+binary      = "bandwhich"
+crate_name  = "bandwhich"
+
+[[packages]]
+name        = "trippy"
+description = "Network diagnostic TUI combining traceroute and ping"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "fujiapple852/trippy"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "trip"
+
+[[packages]]
+name        = "netscanner"
+description = "Network scanner TUI"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "Chleba/netscanner"
+binary      = "netscanner"
+crate_name  = "netscanner"
+
+[[packages]]
+name        = "impala"
+description = "Wi-Fi management TUI"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "pythops/impala"
+binary      = "impala"
+crate_name  = "impala"
+
+[[packages]]
+name        = "vector"
+description = "High-performance observability data pipeline"
+version     = "latest"
+category    = "xtra"
+install     = "script"
+url         = "https://sh.vector.dev"
+github      = "vectordotdev/vector"
+binary      = "vector"
+
+[[packages]]
+name        = "skim"
+description = "Fuzzy finder written in Rust (sk)"
+version     = "latest"
+category    = "core"
+install     = "cargo"
+github      = "skim-rs/skim"
+binary      = "sk"
+crate_name  = "skim"
+
+[[packages]]
+name        = "navi"
+description = "Interactive cheatsheet tool for the terminal"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "denisidoro/navi"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "navi"
+
+[[packages]]
+name        = "tealdeer"
+description = "Fast tldr client in Rust"
+version     = "latest"
+category    = "core"
+install     = "apt"
+binary      = "tldr"
+apt_name    = "tealdeer"
+
+[[packages]]
+name        = "intelli-shell"
+description = "Fuzzy shell history with bookmarks"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "lasantosr/intelli-shell"
+binary      = "intelli-shell"
+crate_name  = "intelli-shell"
+
+[[packages]]
+name        = "television"
+description = "Blazingly fast fuzzy finder TUI"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "alexpasmantier/television"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "tv"
+
+[[packages]]
+name        = "broot"
+description = "Interactive tree view, fuzzy search, navigate directories"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "Canop/broot"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "broot"
+
+[[packages]]
+name        = "helix"
+description = "Post-modern modal text editor"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "helix-editor/helix"
+asset       = "x86_64-linux.tar.xz"
+binary      = "hx"
+
+[[packages]]
+name        = "kibi"
+description = "Tiny configurable text editor (< 1024 lines of Rust)"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "ilai-deutel/kibi"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "kibi"
+
+[[packages]]
+name        = "amp"
+description = "Text editor inspired by vim, written in Rust"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "jmacdonald/amp"
+binary      = "amp"
+crate_name  = "amp"
+
+[[packages]]
+name        = "ox"
+description = "Fast and lightweight terminal text editor"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "curlpipe/ox"
+asset       = "ox-linux"
+binary      = "ox"
+
+[[packages]]
+name        = "iota"
+description = "A terminal-based text editor written in Rust"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "gchp/iota"
+binary      = "iota"
+crate_name  = "iota"
+
+[[packages]]
+name        = "joshuto"
+description = "Ranger-like terminal file manager written in Rust"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "kamiyaa/joshuto"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "joshuto"
+
+[[packages]]
+name        = "spacedrive"
+description = "Open-source cross-platform file explorer"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "spacedriveapp/spacedrive"
+asset       = "x86_64.AppImage"
+binary      = "spacedrive"
+
+[[packages]]
+name        = "tre"
+description = "Tree command reimplemented in Rust with git support"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "dduan/tre"
+binary      = "tre"
+crate_name  = "tre-command"
+
+[[packages]]
+name        = "lla"
+description = "Lightning-fast ls alternative with plugins"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "chaqchase/lla"
+binary      = "lla"
+crate_name  = "lla"
+
+[[packages]]
+name        = "czkawka"
+description = "Fast duplicate file and folder finder"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "qarmin/czkawka"
+asset       = "linux_czkawka_cli"
+binary      = "czkawka_cli"
+
+[[packages]]
+name        = "brush"
+description = "Bash-compatible shell implemented in Rust"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "reubeno/brush"
+binary      = "brush"
+crate_name  = "brush-shell"
+
+[[packages]]
+name        = "ion"
+description = "Modern Unix shell written in Rust (Redox OS shell)"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "redox-os/ion"
+binary      = "ion"
+crate_name  = "ion-shell"
+
+[[packages]]
+name        = "shellharden"
+description = "Bash syntax highlighter and harden tool"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "anordal/shellharden"
+binary      = "shellharden"
+crate_name  = "shellharden"
+
+[[packages]]
+name        = "gitui"
+description = "Blazing fast terminal client for git"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "extrawurst/gitui"
+asset       = "gitui-linux-musl.tar.gz"
+binary      = "gitui"
+
+[[packages]]
+name        = "steer"
+description = "Navigate git history with a TUI"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "BrendanGraham14/steer"
+binary      = "steer"
+crate_name  = "steer"
+
+[[packages]]
+name        = "absorb"
+description = "Automatic git fixup commits"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "kloki/absorb"
+binary      = "git-absorb"
+crate_name  = "git-absorb"
+
+[[packages]]
+name        = "gptcommit"
+description = "Auto-generate conventional git commit messages with GPT"
+version     = "latest"
+category    = "ai"
+install     = "cargo"
+github      = "zurawiki/gptcommit"
+binary      = "gptcommit"
+crate_name  = "gptcommit"
+
+[[packages]]
+name        = "zellij"
+description = "Terminal workspace with batteries included"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "zellij-org/zellij"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "zellij"
+
+[[packages]]
+name        = "mprocs"
+description = "Run multiple commands simultaneously in a TUI"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "pvolok/mprocs"
+binary      = "mprocs"
+crate_name  = "mprocs"
+
+[[packages]]
+name        = "systeroid"
+description = "Interactive sysctl TUI manager"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "orhun/systeroid"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "systeroid"
+
+[[packages]]
+name        = "systemctl-tui"
+description = "Simple TUI for systemctl and journalctl"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "rgwood/systemctl-tui"
+binary      = "systemctl-tui"
+crate_name  = "systemctl-tui"
+
+[[packages]]
+name        = "systemd-manager-tui"
+description = "TUI for managing systemd services"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "matheus-git/systemd-manager-tui"
+binary      = "systemd-manager-tui"
+crate_name  = "systemd-manager-tui"
+
+[[packages]]
+name        = "cpustate-tui"
+description = "CPU state TUI visualizer"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "mkulke/cpustate-tui"
+binary      = "cpustate-tui"
+crate_name  = "cpustate-tui"
+
+[[packages]]
+name        = "drill"
+description = "HTTP load testing application written in Rust"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "fcsonline/drill"
+binary      = "drill"
+crate_name  = "drill"
+
+[[packages]]
+name        = "rustscan"
+description = "Fast port scanner that finds open ports in seconds"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "bee-san/RustScan"
+asset       = "x86_64-linux.zip"
+binary      = "rustscan"
+
+[[packages]]
+name        = "simple-http-server"
+description = "Simple static HTTP server"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "TheWaWaR/simple-http-server"
+binary      = "simple-http-server"
+crate_name  = "simple-http-server"
+
+[[packages]]
+name        = "microbin"
+description = "Tiny, self-hosted, feature-rich paste service"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "szabodanika/microbin"
+binary      = "microbin"
+crate_name  = "microbin"
+
+[[packages]]
+name        = "fnm"
+description = "Fast Node.js version manager"
+version     = "latest"
+category    = "core"
+install     = "script"
+url         = "https://fnm.vercel.app/install"
+github      = "Schniz/fnm"
+binary      = "fnm"
+
+[[packages]]
+name        = "volta"
+description = "JavaScript toolchain manager"
+version     = "latest"
+category    = "core"
+install     = "script"
+url         = "https://get.volta.sh"
+github      = "volta-cli/volta"
+binary      = "volta"
+
+[[packages]]
+name        = "deno"
+description = "A secure JavaScript and TypeScript runtime"
+version     = "latest"
+category    = "core"
+install     = "script"
+url         = "https://deno.land/install.sh"
+github      = "denoland/deno"
+binary      = "deno"
+
+[[packages]]
+name        = "swc"
+description = "Super-fast JavaScript/TypeScript compiler"
+version     = "latest"
+category    = "xtra"
+install     = "npm"
+github      = "swc-project/swc"
+binary      = "swc"
+npm_name    = "@swc/cli"
+
+[[packages]]
+name        = "dprint"
+description = "Pluggable and configurable code formatting platform"
+version     = "latest"
+category    = "xtra"
+install     = "script"
+url         = "https://dprint.dev/install.sh"
+github      = "dprint/dprint"
+binary      = "dprint"
+
+[[packages]]
+name        = "ruff"
+description = "Extremely fast Python linter and formatter"
+version     = "latest"
+category    = "core"
+install     = "pip"
+github      = "astral-sh/ruff"
+binary      = "ruff"
+pip_name    = "ruff"
+
+[[packages]]
+name        = "thefuck"
+description = "Corrects your previous console command"
+version     = "latest"
+category    = "xtra"
+install     = "pip"
+github      = "nvbn/thefuck"
+binary      = "thefuck"
+pip_name    = "thefuck"
+
+[[packages]]
+name        = "frum"
+description = "Ruby version manager written in Rust"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "TaKO8Ki/frum"
+binary      = "frum"
+crate_name  = "frum"
+
+[[packages]]
+name        = "frawk"
+description = "Efficient AWK-like data processing language"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "ezrosent/frawk"
+binary      = "frawk"
+crate_name  = "frawk"
+
+[[packages]]
+name        = "rustpython"
+description = "Python interpreter written in Rust"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "RustPython/RustPython"
+binary      = "rustpython"
+crate_name  = "rustpython"
+
+[[packages]]
+name        = "pixi"
+description = "Fast cross-platform conda-based package manager"
+version     = "latest"
+category    = "core"
+install     = "script"
+url         = "https://pixi.sh/install.sh"
+github      = "prefix-dev/pixi"
+binary      = "pixi"
+
+[[packages]]
+name        = "cargo-appimage"
+description = "Build AppImages with cargo"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "StratusFearMe21/cargo-appimage"
+binary      = "cargo-appimage"
+crate_name  = "cargo-appimage"
+
+[[packages]]
+name        = "cargo-seek"
+description = "Search crates.io from the terminal"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "tareqimbasher/cargo-seek"
+binary      = "cargo-seek"
+crate_name  = "cargo-seek"
+
+[[packages]]
+name        = "cargo-ui"
+description = "Graphical user interface for cargo"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "slint-ui/cargo-ui"
+binary      = "cargo-ui"
+crate_name  = "cargo-ui"
+
+[[packages]]
+name        = "uutils-coreutils"
+description = "Rust reimplementation of GNU coreutils"
+version     = "latest"
+category    = "core"
+install     = "cargo"
+github      = "uutils/coreutils"
+binary      = "coreutils"
+crate_name  = "coreutils"
+
+[[packages]]
+name        = "astral-uv"
+description = "Extremely fast Python package manager by Astral"
+version     = "latest"
+category    = "core"
+install     = "script"
+url         = "https://astral.sh/uv/install.sh"
+github      = "astral-sh/uv"
+binary      = "uv"
+
+[[packages]]
+name        = "jql"
+description = "JSON query language CLI"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "yamafaktory/jql"
+binary      = "jql"
+crate_name  = "jql"
+
+[[packages]]
+name        = "vtracer"
+description = "Convert raster images to SVG vector graphics"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "visioncortex/vtracer"
+binary      = "vtracer"
+crate_name  = "vtracer"
+
+[[packages]]
+name        = "otree"
+description = "View JSON/YAML/TOML as a foldable object tree"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "fioncat/otree"
+asset       = "x86_64-unknown-linux-gnu.tar.gz"
+binary      = "otree"
+
+[[packages]]
+name        = "openapi-tui"
+description = "Terminal UI for browsing OpenAPI specs"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "zaghaghi/openapi-tui"
+binary      = "openapi-tui"
+crate_name  = "openapi-tui"
+
+[[packages]]
+name        = "fastmod"
+description = "Fast partial codemod tool"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "facebookincubator/fastmod"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "fastmod"
+
+[[packages]]
+name        = "igrep"
+description = "Interactive grep — search patterns and preview results"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "konradsz/igrep"
+binary      = "ig"
+crate_name  = "igrep"
+
+[[packages]]
+name        = "scooter"
+description = "Find and replace across files in a TUI"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "thomasschafer/scooter"
+binary      = "scooter"
+crate_name  = "scooter"
+
+[[packages]]
+name        = "serpl"
+description = "TUI search and replace with regex"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "yassinebridi/serpl"
+binary      = "serpl"
+crate_name  = "serpl"
+
+[[packages]]
+name        = "youki"
+description = "Container runtime written in Rust"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "youki-dev/youki"
+asset       = "x86_64_linux.tar.gz"
+binary      = "youki"
+
+[[packages]]
+name        = "appimagetool"
+description = "Create AppImages from AppDir directories"
+version     = "latest"
+category    = "core"
+install     = "github"
+github      = "AppImage/appimagetool"
+asset       = "x86_64.AppImage"
+binary      = "appimagetool"
+
+[[packages]]
+name        = "appimageupdate"
+description = "Update AppImages in-place"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "AppImageCommunity/AppImageUpdate"
+asset       = "x86_64.AppImage"
+binary      = "AppImageUpdate"
+
+[[packages]]
+name        = "ripdrag"
+description = "Drag files from and to the terminal"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "nik012003/ripdrag"
+binary      = "ripdrag"
+crate_name  = "ripdrag"
+
+[[packages]]
+name        = "cmd-wrapped"
+description = "Find out how much time you spend in the terminal"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "YiNNx/cmd-wrapped"
+binary      = "cmd-wrapped"
+crate_name  = "cmd-wrapped"
+
+[[packages]]
+name        = "confetty"
+description = "Confetti fireworks in your terminal"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "Handfish/confetty_rs"
+binary      = "confetty"
+crate_name  = "confetty_rs"
+
+[[packages]]
+name        = "topgrade"
+description = "Upgrade everything — apt, cargo, npm, flatpak, etc."
+version     = "latest"
+category    = "core"
+install     = "deb"
+github      = "topgrade-rs/topgrade"
+asset       = "amd64.deb"
+binary      = "topgrade"
+
+[[packages]]
+name        = "soar"
+description = "Distro-agnostic package manager (SAB format)"
+version     = "latest"
+category    = "core"
+install     = "script"
+url         = "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh"
+github      = "pkgforge/soar"
+binary      = "soar"
+
+[[packages]]
+name        = "pacstall"
+description = "AUR-inspired package manager for Ubuntu"
+version     = "latest"
+category    = "core"
+install     = "script"
+url         = "https://pacstall.dev/q/install"
+github      = "pacstall/pacstall"
+binary      = "pacstall"
+
+[[packages]]
+name        = "doxx"
+description = "Documentation tool for shell scripts"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "bgreenwell/doxx"
+binary      = "doxx"
+crate_name  = "doxx"
+
+[[packages]]
+name        = "cpc"
+description = "Terminal calculator and currency/unit converter"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "probablykasper/cpc"
+binary      = "cpc"
+crate_name  = "cpc"
+
+[[packages]]
+name        = "fresh"
+description = "A file watcher with automatic restarts"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "sinelaw/fresh"
+binary      = "fresh"
+crate_name  = "fresh"
+
+[[packages]]
+name        = "weathr"
+description = "Terminal weather app"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "Veirt/weathr"
+binary      = "weathr"
+crate_name  = "weathr"
+
+[[packages]]
+name        = "aichat"
+description = "All-in-one AI CLI tool with RAG and agents"
+version     = "latest"
+category    = "ai"
+install     = "cargo"
+github      = "sigoden/aichat"
+binary      = "aichat"
+crate_name  = "aichat"
+
+[[packages]]
+name        = "tenere"
+description = "TUI interface for LLMs written in Rust"
+version     = "latest"
+category    = "ai"
+install     = "cargo"
+github      = "pythops/tenere"
+binary      = "tenere"
+crate_name  = "tenere"
+
+[[packages]]
+name        = "oatmeal"
+description = "Terminal UI for LLMs with model switching"
+version     = "latest"
+category    = "ai"
+install     = "github"
+github      = "dustinblackman/oatmeal"
+asset       = "linux_x86_64.tar.gz"
+binary      = "oatmeal"
+
+[[packages]]
+name        = "ironclaw"
+description = "CLI agent framework from NEAR AI"
+version     = "latest"
+category    = "ai"
+install     = "script"
+url         = "https://github.com/nearai/ironclaw/releases/download/ironclaw-v0.29.1/ironclaw-installer.sh"
+github      = "nearai/ironclaw"
+binary      = "ironclaw"
+
+[[packages]]
+name        = "gemini-cli"
+description = "Google Gemini CLI — AI assistant in the terminal"
+version     = "latest"
+category    = "ai"
+install     = "npm"
+github      = "google-gemini/gemini-cli"
+binary      = "gemini"
+npm_name    = "@google/gemini-cli"
+
+[[packages]]
+name        = "open-interpreter"
+description = "Local AI agent that can execute code"
+version     = "latest"
+category    = "ai"
+install     = "pip"
+github      = "OpenInterpreter/open-interpreter"
+binary      = "interpreter"
+pip_name    = "open-interpreter"
+
+[[packages]]
+name        = "bashsenpai"
+description = "Terminal AI assistant for bash commands"
+version     = "latest"
+category    = "ai"
+install     = "pip"
+github      = "BashSenpai/cli"
+binary      = "bashsenpai"
+pip_name    = "bashsenpai"
+
+[[packages]]
+name        = "xinfer"
+description = "AI inference CLI"
+version     = "latest"
+category    = "ai"
+install     = "npm"
+github      = "guoqingbao/xinfer"
+binary      = "xinfer"
+npm_name    = "xinfer-ai"
+
+[[packages]]
+name        = "llmfit"
+description = "LLM fine-tuning tool"
+version     = "latest"
+category    = "ai"
+install     = "cargo"
+github      = "AlexsJones/llmfit"
+binary      = "llmfit"
+crate_name  = "llmfit"
+
+[[packages]]
+name        = "llm-chain"
+description = "Rust library for building LLM applications"
+version     = "latest"
+category    = "ai"
+install     = "cargo"
+github      = "sobelio/llm-chain"
+binary      = "llm"
+crate_name  = "llm-chain-openai"
+
+[[packages]]
+name        = "clerk"
+description = "Terminal note-taking tool"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "blankenshipz/clerk"
+binary      = "clerk"
+crate_name  = "clerk"
+
+[[packages]]
+name        = "fireside-chat"
+description = "GGUF local LLM chat with COSMIC/GTK interface"
+version     = "latest"
+category    = "ai"
+install     = "github"
+github      = "danielclough/fireside-chat"
+asset       = "x86_64.AppImage"
+binary      = "fireside-chat"
+
+[[packages]]
+name        = "con-terminal"
+description = "AI-powered terminal by nowledge"
+version     = "0.1.0-beta.77"
+category    = "ai"
+install     = "tarball"
+url         = "https://github.com/nowledge-co/con-terminal/releases/download/v0.1.0-beta.77/con-0.1.0-beta.77-linux-x86_64.tar.gz"
+github      = "nowledge-co/con-terminal"
+binary      = "con"
+
+[[packages]]
+name        = "kalosm"
+description = "Local AI model runtime — speech, text, images"
+version     = "latest"
+category    = "ai"
+install     = "cargo"
+github      = "floneum/kalosm"
+binary      = "kalosm"
+crate_name  = "kalosm"
+
+[[packages]]
+name        = "madamiru"
+description = "Media player with multi-pane grid view"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "mtkennerly/madamiru"
+asset       = "x86_64-unknown-linux-musl.tar.gz"
+binary      = "madamiru"
+
+[[packages]]
+name        = "image-roll"
+description = "Simple and fast GTK image viewer"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "weclaw1/image-roll"
+binary      = "image-roll"
+crate_name  = "image-roll"
+
+[[packages]]
+name        = "tts-tui"
+description = "TUI frontend for text-to-speech"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "lesleyrs/tts-tui"
+binary      = "tts-tui"
+crate_name  = "tts-tui"
+
+[[packages]]
+name        = "vle"
+description = "Video editor written in Rust"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "tuffy/vle"
+binary      = "vle"
+crate_name  = "vle"
+
+[[packages]]
+name        = "reversal-icon-theme"
+description = "Reversal icon theme with vivid colors"
+version     = "latest"
+category    = "themes"
+install     = "git"
+url         = "https://github.com/yeyushengfan258/Reversal-icon-theme.git"
+github      = "yeyushengfan258/Reversal-icon-theme"
+install_cmd = "bash install.sh -a -d /usr/share/icons"
+
+[[packages]]
+name        = "fluent-icon-theme"
+description = "Fluent icon theme by vinceliuice"
+version     = "latest"
+category    = "themes"
+install     = "git"
+url         = "https://github.com/vinceliuice/Fluent-icon-theme.git"
+github      = "vinceliuice/Fluent-icon-theme"
+install_cmd = "bash install.sh -d /usr/share/icons"
+
+[[packages]]
+name        = "la-capitaine-icon-theme"
+description = "La Capitaine icon theme"
+version     = "latest"
+category    = "themes"
+install     = "git"
+url         = "https://github.com/keeferrourke/la-capitaine-icon-theme.git"
+github      = "keeferrourke/la-capitaine-icon-theme"
+install_cmd = "cp -r . /usr/share/icons/la-capitaine"
+
+[[packages]]
+name        = "qogir-icon-theme"
+description = "Qogir icon theme — flat and colorful"
+version     = "latest"
+category    = "themes"
+install     = "git"
+url         = "https://github.com/vinceliuice/Qogir-icon-theme.git"
+github      = "vinceliuice/Qogir-icon-theme"
+install_cmd = "bash install.sh -d /usr/share/icons"
+
+[[packages]]
+name        = "tela-icon-theme"
+description = "Tela circle icon theme"
+version     = "latest"
+category    = "themes"
+install     = "git"
+url         = "https://github.com/vinceliuice/Tela-icon-theme.git"
+github      = "vinceliuice/Tela-icon-theme"
+install_cmd = "bash install.sh -a -d /usr/share/icons"
+
+[[packages]]
+name        = "whitesur-icon-theme"
+description = "WhiteSur icon theme — macOS-like"
+version     = "latest"
+category    = "themes"
+install     = "git"
+url         = "https://github.com/vinceliuice/WhiteSur-icon-theme.git"
+github      = "vinceliuice/WhiteSur-icon-theme"
+install_cmd = "bash install.sh -d /usr/share/icons"
+
+[[packages]]
+name        = "cosmic-uniform-glass-theme"
+description = "Frosted glass theme for COSMIC Desktop"
+version     = "latest"
+category    = "desktop"
+install     = "git"
+url         = "https://github.com/xarbit/cosmic-uniform-glass-theme.git"
+github      = "xarbit/cosmic-uniform-glass-theme"
+install_cmd = "mkdir -p /usr/share/cosmic/themes && cp -r . /usr/share/cosmic/themes/cosmic-uniform-glass-theme"
+
+[[packages]]
+name        = "simplemoji"
+description = "COSMIC/GTK emoji picker"
+version     = "latest"
+category    = "desktop"
+install     = "script"
+url         = "https://github.com/SergioRibera/Simplemoji/releases/download/v1.2.4/simplemoji-installer.sh"
+github      = "SergioRibera/Simplemoji"
+binary      = "simplemoji"
+
+[[packages]]
+name        = "cosmic-connect"
+description = "COSMIC Connect — KDE Connect integration applet"
+version     = "latest"
+category    = "desktop"
+install     = "git"
+url         = "https://github.com/BlancoBAM/cosmic-connect.git"
+github      = "BlancoBAM/cosmic-connect"
+install_cmd = "just install"
+
+[[packages]]
+name        = "cosmic-clipboard-manager"
+description = "COSMIC Clipboard Manager applet"
+version     = "latest"
+category    = "desktop"
+install     = "cargo"
+github      = "cosmic-utils/clipboard-manager"
+binary      = "cosmic-clipboard-manager"
+
+[[packages]]
+name        = "cosmic-color-picker"
+description = "COSMIC Color Picker utility"
+version     = "latest"
+category    = "desktop"
+install     = "cargo"
+github      = "PixelDoted/cosmic-color-picker"
+binary      = "cosmic-color-picker"
+
+[[packages]]
+name        = "cosmicding"
+description = "Linkding bookmarks client for COSMIC Desktop"
+version     = "latest"
+category    = "desktop"
+install     = "cargo"
+github      = "vkhitrin/cosmicding"
+binary      = "cosmicding"
+crate_name  = "cosmicding"
+
+[[packages]]
+name        = "cosmic-forecast"
+description = "Weather app for COSMIC Desktop"
+version     = "latest"
+category    = "desktop"
+install     = "cargo"
+github      = "cosmic-utils/forecast"
+binary      = "cosmic-forecast"
+
+[[packages]]
+name        = "cosmic-app-hub"
+description = "COSMIC App Hub — discover and install COSMIC apps"
+version     = "latest"
+category    = "desktop"
+install     = "cargo"
+github      = "cosmic-utils/app-hub"
+binary      = "cosmic-app-hub"
+
+[[packages]]
+name        = "noctua"
+description = "Dark mode browser dashboard for COSMIC Desktop"
+version     = "latest"
+category    = "desktop"
+install     = "cargo"
+github      = "cosmic-utils/noctua"
+binary      = "noctua"
+
+[[packages]]
+name        = "hellfire"
+description = "HellFire Browser — privacy-focused Firefox fork"
+version     = "152.0a1"
+category    = "core"
+install     = "tarball"
+url         = "https://github.com/CYFARE/HellFire/releases/download/v152.0a1_FP2/hellfire-152.0a1.en-US.linux-x86_64.tar.xz"
+github      = "CYFARE/HellFire"
+binary      = "firefox"
+
+[[packages]]
+name        = "waveterm"
+description = "Open-source AI-native terminal with visual blocks"
+version     = "latest"
+category    = "xtra"
+install     = "github"
+github      = "wavetermdev/waveterm"
+asset       = "amd64.deb"
+binary      = "waveterm"
+
+[[packages]]
+name        = "ferdium"
+description = "All-in-one messaging and service desktop app"
+version     = "latest"
+category    = "xtra"
+install     = "appimage"
+url         = "https://github.com/ferdium/ferdium-app/releases/download/v7.1.2/Ferdium-linux-Portable-7.1.2-x86_64.AppImage"
+github      = "ferdium/ferdium-app"
+binary      = "ferdium"
+
+[[packages]]
+name        = "furtherance"
+description = "Time tracker app"
+version     = "latest"
+category    = "xtra"
+install     = "flatpak"
+github      = "unobserved-io/Furtherance"
+binary      = "furtherance"
+flatpak_id  = "com.lakoliu.Furtherance"
+
+[[packages]]
+name        = "vicinae"
+description = "Vicinae Visual Workspace"
+version     = "latest"
+category    = "xtra"
+install     = "appimage"
+url         = "https://github.com/vicinaehq/vicinae/releases/download/v0.21.0/Vicinae-x86_64.AppImage"
+github      = "vicinaehq/vicinae"
+binary      = "vicinae"
+
+[[packages]]
+name        = "keygeist"
+description = "SSH agent UI manager"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "mudler/Keygeist"
+binary      = "keygeist"
+crate_name  = "keygeist"
+
+[[packages]]
+name        = "linuxtoys"
+description = "Collection of interactive terminal toys"
+version     = "latest"
+category    = "xtra"
+install     = "git"
+url         = "https://github.com/psygreg/linuxtoys.git"
+github      = "psygreg/linuxtoys"
+install_cmd = "bash install.sh 2>/dev/null || true"
+
+[[packages]]
+name        = "script-kit"
+description = "Script Kit — automate anything with JavaScript"
+version     = "latest"
+category    = "xtra"
+install     = "appimage"
+url         = "https://github.com/johnlindquist/kit/releases/download/v3.45.1/Script-Kit-Linux-3.45.1-x86_64.AppImage"
+github      = "johnlindquist/kit"
+binary      = "kit"
+
+[[packages]]
+name        = "telescope"
+description = "Fuzzy-finder, picker, and navigator"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "alexpasmantier/television"
+binary      = "tv"
+crate_name  = "telescope"
+
+[[packages]]
+name        = "splashboard"
+description = "Customizable launch screen / dashboard"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "unhappychoice/splashboard"
+binary      = "splashboard"
+crate_name  = "splashboard"
+
+[[packages]]
+name        = "noto-color-emoji"
+description = "Noto Color Emoji font"
+version     = "latest"
+category    = "core"
+install     = "apt"
+apt_name    = "fonts-noto-color-emoji"
+
+[[packages]]
+name        = "espanso-gui"
+description = "Graphical frontend for the Espanso text expander"
+version     = "latest"
+category    = "xtra"
+install     = "flatpak"
+flatpak_id  = "io.unobserved.espansoGUI"
+
+[[packages]]
+name        = "lotti"
+description = "System indicator and journal widget app"
+version     = "latest"
+category    = "xtra"
+install     = "flatpak"
+flatpak_id  = "com.matthiasn.lotti"
+
+[[packages]]
+name        = "brief"
+description = "Distraction-free markdown writing app"
+version     = "latest"
+category    = "xtra"
+install     = "flatpak"
+flatpak_id  = "io.github.shonebinu.Brief"
+
+[[packages]]
+name        = "wonderpen"
+description = "Professional writing editor"
+version     = "latest"
+category    = "xtra"
+install     = "flatpak"
+flatpak_id  = "com.tominlab.wonderpen"
+
+[[packages]]
+name        = "digikam"
+description = "Professional photo asset management"
+version     = "latest"
+category    = "xtra"
+install     = "flatpak"
+flatpak_id  = "org.kde.digikam"
+
+[[packages]]
+name        = "planify"
+description = "Task management and to-do app"
+version     = "latest"
+category    = "xtra"
+install     = "flatpak"
+flatpak_id  = "io.github.alainm23.planify"
+
+[[packages]]
+name        = "proton-mail"
+description = "End-to-end encrypted email client"
+version     = "latest"
+category    = "xtra"
+install     = "flatpak"
+flatpak_id  = "me.proton.Mail"
+
+[[packages]]
+name        = "warp"
+description = "Warp AI-native terminal for Linux"
+version     = "latest"
+category    = "xtra"
+install     = "deb"
+url         = "https://app.warp.dev/download?package=deb"
+github      = "warpdotdev/warp"
+binary      = "warp"
+
