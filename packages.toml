@@ -1778,3 +1778,102 @@ install     = "appimage"
 github      = "BlancoBAM/BrowserOS"
 binary      = "browseros"
 tags        = ["browser", "web", "appimage"]
+
+[[packages]]
+name        = "dua"
+description = "View disk space usage and delete unwanted data"
+version     = "latest"
+category    = "core"
+install     = "cargo"
+github      = "Byron/dua-cli"
+binary      = "dua"
+
+
+[[packages]]
+name        = "con"
+description = "AI-native terminal by Nowledge"
+version     = "latest"
+category    = "xtra"
+install     = "tarball"
+github      = "nowledge-co/con-terminal"
+binary      = "con"
+
+
+[[packages]]
+name        = "rip2"
+description = "rm-improved: a safe file removal tool"
+version     = "latest"
+category    = "core"
+install     = "cargo"
+github      = "prefix-dev/rip"
+binary      = "rip"
+
+
+[[packages]]
+name        = "quokka"
+description = "Fast and simple TUI for REST APIs"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "dutradotdev/quokka"
+binary      = "quokka"
+
+
+[[packages]]
+name        = "scriptor"
+description = "Script runner TUI"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "giacomopiccinini/scriptor"
+binary      = "scriptor"
+
+
+[[packages]]
+name        = "spider"
+description = "High-performance web crawler library/CLI"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "spider-rs/spider"
+binary      = "spider_cli"
+
+
+[[packages]]
+name        = "columbus"
+description = "Terminal file manager with preview"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "sivaprakashkrp/columbus"
+binary      = "columbus"
+
+
+[[packages]]
+name        = "matchmaker"
+description = "Fuzzy match files from the terminal"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "Squirreljetpack/matchmaker"
+binary      = "matchmaker"
+
+
+[[packages]]
+name        = "numr"
+description = "TUI number base converter"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "nasedkinpv/numr"
+binary      = "numr"
+
+
+[[packages]]
+name        = "ostt"
+description = "One-shot TUI launcher"
+version     = "latest"
+category    = "xtra"
+install     = "cargo"
+github      = "kristoferlund/ostt"
+binary      = "ostt"
