@@ -1757,3 +1757,24 @@ url         = "https://app.warp.dev/download?package=deb"
 github      = "warpdotdev/warp"
 binary      = "warp"
 
+[[packages]]
+name        = "zen-browser"
+description = "Zen Browser — privacy-first, calm Firefox-based browser (default Lilith browser)"
+version     = "latest"
+category    = "core"
+install     = "flatpak"
+flatpak_id  = "app.zen_browser.zen"
+flatpak_remote = "flathub"
+url         = "https://flathub.org/en/apps/app.zen_browser.zen"
+binary      = "zen"
+tags        = ["browser", "web", "privacy", "default"]
+
+[[packages]]
+name        = "browseros"
+description = "BrowserOS — Lilith backup web browser (AppImage)"
+version     = "latest"
+category    = "core"
+install     = "appimage"
+github      = "BlancoBAM/BrowserOS"
+binary      = "browseros"
+tags        = ["browser", "web", "appimage"]
